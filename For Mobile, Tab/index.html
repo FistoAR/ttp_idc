@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terra Tech Catalogue</title>
+  <link rel="icon" href="./images/Page-1/logo.png">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body style="background-color: gainsboro;">
+
+
+
+
+
+
+
+  <button id="navToggle" class="nav-toggle-btn" aria-label="Toggle menu" aria-expanded="false">
+    <span class="hamburger-icon">
+      <span class="hamburger-bar bar1"></span>
+      <span class="hamburger-bar bar2"></span>
+      <span class="hamburger-bar bar3"></span>
+    </span>
+  </button>
+  <!-- Overlay -->
+  <div id="navOverlay" class="nav-overlay"></div>
+  <!-- Floating Table of Contents Nav -->
+  <nav id="tocNav" class="toc-floating" aria-label="Table of Contents">
+    <div class="toc-title">Table of contents</div>
+     <ul class="toc-list">
+          <!-- <li class="tb-link" data-page="1"><a> HOME</a></li>
+          <li class="tb-link" data-page="2"><a> LIST OF SERVICES</a></li> -->
+          <li class="tb-link cursor-pointer" data-target="home" data-audio-path="../audios/home.mp3"><a> Home </a></li>
+          <li class="tb-link cursor-pointer" data-target="about-us" data-audio-path="../audios/about us.mp3"><a>About us</a></li>
+          <li class="tb-link cursor-pointer" data-target="120ml Round Container" data-audio-path="../audios/products.mp3"><a> Products  </a></li>
+          <li class="tb-link cursor-pointer" data-target="contact-us" data-audio-path="../audios/contact_us.mp3"><a> Contact Us  </a></li>
+          <!-- <li class="tb-link" data-page="28" data-audio-path="../audios/products.mp3"><a> PRODUCTS</a></li>
+          <li class="tb-link" data-page="40" data-audio-path="../audios/contact_us.mp3"><a> CONTACT US</a></li> -->
+        </ul>
+  </nav>
+  <audio id="navAudio"></audio>
+  <button id="shareBtn" class="share-btn" aria-label="Share this page">
+    <!-- Replace the previous SVG in your .share-btn with this: -->
+    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- White background with green border -->
+      <circle cx="15" cy="15" r="14" fill="#ffffff" stroke="#0f2f1d" stroke-width="2" />
+
+      <!-- Share icon in green -->
+      <g>
+        <circle cx="9" cy="15.5" r="2.5" fill="#0f2f1d" />
+        <circle cx="21" cy="8.5" r="2.5" fill="#0f2f1d" />
+        <circle cx="21" cy="21.5" r="2.5" fill="#0f2f1d" />
+        <path d="M11.2 14.2l7.6-4.2M11.2 16.8l7.6 4.2" stroke="#0f2f1d" stroke-width="1.6" stroke-linecap="round" />
+      </g>
+    </svg>
+
+
+
+  </button>
+  <!-- <div class="share-menu" id="shareMenu" role="menu" aria-hidden="true">
+        <div class="share-link-row">
+          <input id="shareInput" type="text">
+          <button id="copyLinkBtn" class="copy-link-btn" role="menuitem">Copy Link</button>
+        </div>
+        <span class="copied-msg" id="copiedMsg">Copied!</span>
+      </div> -->
+  <div class="share-menu" id="shareMenu" role="menu" aria-hidden="true">
+    <div class="share-link-row">
+      <input id="shareInput" type="text" value="https://yourwebsite.com" readonly>
+      <div class="flex gap-2">
+        <button id="copyLinkBtn" class="copy-link-btn" role="menuitem">Copy Link</button>
+        <button id="whatsappShareBtn" class="whatsapp-share-btn  " role="menuitem">
+          <img src=" https://img.icons8.com/fluency/48/whatsapp.png" alt="WhatsApp" width="30" height="30"
+            class="mt-[10%]">
+
+        </button>
+      </div>
+
+      <span class="copied-msg" id="copiedMsg">Copied!</span>
+      <!-- ✅ WhatsApp Share Button -->
+
+
+    </div>
+
+
+  </div>
+
+
+  <div class="back-top-wrapper">
+    <div class="back-top-button">
+      <i class="fa-solid fa-arrow-up"></i>
+    </div>
+  </div>
+
+  <!-- ==========================page 1 start=============================================== -->
+
+
+  <div class="page relative" id="home">
+    <img src="../images/white_blank.webp" alt="white_page" class=" w-[100%]  top-[0] right-[0] white-page" />
+               <img src="../images/page_1/background_image.webp" alt="background_image" class="absolute top-[0%] left-[0%]"/>
+            <img src="../images/page_1/logo.webp" alt="logo" class="absolute top-[5%] left-[5%] w-[30%]"/>
+            <img src="../images/page_1/green-logo.webp" alt="logo" class="absolute top-[5%] right-[5%] w-[30%]"/>
+            <img src="../images/page_1/heading.webp" alt="heading" class="absolute top-[15%] left-[5%] z-1 w-[78%]"/>
+            <img src="../images/page_1/box-img.webp" alt="boxes" class="absolute w-[80%] top-[30%] right-[5%] "/>
+            <img src="../images/page_1/yellow-box.webp" alt="no-1 coimbatore" class="absolute w-[45%] top-[60%] left-[5%]"/>
+            <img src="../images/page_1/yellow-bar.webp" alt="yellow-bg" class="absolute w-[100%] bottom-[10%] w-[55%] h-[8%] left-[%]"/>
+            <img src="../images/page_1/bottom-icons.webp" alt="icons" class="absolute w-[60%] bottom-[12%] left-[5%] "/>
+            <img src="../images/page_1/mobile-icon.webp" alt="mobile-icon" class="absolute w-[2.5%] bottom-[6%] left-[5%] "/>
+            <!-- Mobile Number 1 -->
+            <a href="tel:+919994440423"><img src="../images/page_1/mobile-no-1.webp" alt="mobile-number-1" class="absolute w-[12%] bottom-[6.5%] left-[8.5%]" /></a>
+               <!-- Mobile Number 2 -->
+            <a href="tel:+918220363639"><img src="../images/page_1/mobile-no-2.webp" alt="mobile-number-2" class="absolute w-[12%] bottom-[6.5%] left-[22%]" /></a>
+                <!-- Email -->
+            <a href="mailto:terratechpacks@gmail.com"><img src="../images/page_1/email.webp" alt="email" class="absolute w-[30%] bottom-[3%] left-[5%]" /></a>
+             <img src="../images/page_1/line.webp" alt="line" class="absolute w-[%] bottom-[3%] left-[36%] h-[5%]"/>
+             <img src="../images/page_1/location.webp" alt="location" class="absolute w-[45%] bottom-[4%] right-[18%] "/>
+             <img src="../images/page_1/QR.webp" alt="QR" class="absolute w-[11%] bottom-[4%] right-[5%] "/>
+  </div>
+
+  <!-- ==========================page 1 end=============================================== -->
+  <!-- ==========================page 2 start=============================================== -->
+  <div class="page relative" >
+    <img src="../images/white_blank.webp" alt="white_page" class=" w-[100%]  top-[0] right-[0] white-page" />
+     <img src="../images/page_2_new/toc.png" alt="" class="about_images about_toc">
+        <img src="../images/page_2_new/logo_image.png" alt="" class="about_images about_logo">
+    <!-- -------------01------------- -->
+    <!-- <img src="../images/page_2/120ml Round Container.webp" alt="120ml Round Container"
+      class="absolute w-[28%] top-[5%] left-[35%] tb-link cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105"
+      data-target="120ml Round Container" data-audio-path="../audios/120ml Round Container.mp3" />
+    <img src="../images/page_2/Line.webp" alt="line" class="absolute w-[50%] top-[7%] left-[35%] cursor-pointer" />
+    <img src="../images/page_2/03.webp" alt="03" class="absolute w-[3%] top-[6%] right-[10%] cursor-pointer" /> -->
+
+    <!-- -------------02------------- -->
+    <!-- <img src="../images/page_2/250ml Round Container.webp" alt="250ml Round Container"
+      class="absolute w-[28%] top-[11%] left-[35%] tb-link cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105"
+      data-target="120ml Round Container" data-audio-path="../audios/250ml Round Container.mp3" />
+    <img src="../images/page_2/Line.webp" alt="line" class="absolute w-[50%] top-[13%] left-[35%] cursor-pointer" />
+    <img src="../images/page_2/03.webp" alt="03" class="absolute w-[3%] top-[12%] right-[10%] cursor-pointer" /> -->
+
+    <!-- -------------03------------- -->
+    <!-- <img src="../images/page_2/250ml Glass Round.webp" alt="120ml Round Container"
+      class="absolute w-[23%] top-[17%] left-[35%] tb-link cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105"
+      data-target="250ml Glass Round" data-audio-path="../audios/250ml Glass Round.mp3" />
+    <img src="../images/page_2/Line.webp" alt="line" class="absolute w-[50%] top-[19%] left-[35%] cursor-pointer" />
+    <img src="../images/page_2/04.webp" alt="04" class="absolute w-[3%] top-[18%] right-[10%] cursor-pointer" /> -->
+
+    <!-- -------------04------------- -->
+    <!-- <img src="../images/page_2/300ml Round Container  .webp" alt="120ml Round Container"
+      class="absolute w-[28%] top-[23%] left-[35%] tb-link cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105"
+      data-target="250ml Glass Round" data-audio-path="../audios/300ml Round Container.mp3" />
+    <img src="../images/page_2/Line.webp" alt="line" class="absolute w-[50%] top-[25%] left-[35%] cursor-pointer" />
+    <img src="../images/page_2/04.webp" alt="04" class="absolute w-[3%] top-[24%] right-[10%] cursor-pointer" /> -->
+
+    <!-- -------------05------------- -->
+    <!-- <img src="../images/page_2/500ml Round Container.webp" alt="120ml Round Container"
+      class="absolute w-[28%] top-[29%] left-[35%] tb-link cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105"
+      data-target="500ml Round Container" data-audio-path="../audios/500ml Round Container.mp3" />
+    <img src="../images/page_2/Line.webp" alt="line" class="absolute w-[50%] top-[31%] left-[35%] cursor-pointer" />
+    <img src="../images/page_2/05.webp" alt="05" class="absolute w-[3%] top-[30%] right-[10%] cursor-pointer" /> -->
+
+    <!-- -------------06------------- -->
+    <!-- <img src="../images/page_2/450ml Container.webp" alt="120ml Round Container"
+      class="absolute w-[32%] top-[35%] left-[35%] tb-link cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105"
+      data-target="500ml Round Container" data-audio-path="../audios/500gms , 450ml Container.mp3" />
+    <img src="../images/page_2/Line.webp" alt="line" class="absolute w-[50%] top-[37%] left-[35%] cursor-pointer" />
+    <img src="../images/page_2/05.webp" alt="05" class="absolute w-[3%] top-[36%] right-[10%] cursor-pointer" /> -->
+
+    <!-- -------------07------------- -->
+    <!-- <img src="../images/page_2/500ml Square Container.webp" alt="120ml Round Container"
+      class="absolute w-[28%] top-[41%] left-[35%] tb-link cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105"
+      data-target="500ml Square Container" data-audio-path="../audios/500ml Square Container.mp3" />
+    <img src="../images/page_2/Line.webp" alt="line" class="absolute w-[50%] top-[43%] left-[35%] cursor-pointer" />
+    <img src="../images/page_2/06.webp" alt="06" class="absolute w-[3%] top-[42%] right-[10%] cursor-pointer" /> -->
+
+    <!-- -------------08------------- -->
+    <!-- <img src="../images/page_2/500ml Rectangular Container.webp" alt="120ml Round Container"
+      class="absolute w-[33%] top-[47%] left-[35%] tb-link cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105"
+      data-target="500ml Square Container" data-audio-path="../audios/500ml Rectangular Container.mp3" />
+    <img src="../images/page_2/Line.webp" alt="line" class="absolute w-[50%] top-[49%] left-[35%] cursor-pointer" />
+    <img src="../images/page_2/06.webp" alt="06" class="absolute w-[3%] top-[48%] right-[10%] cursor-pointer" /> -->
+
+    <!-- -------------09------------- -->
+    <!-- <img src="../images/page_2/750ml Round Container.webp" alt="120ml Round Container"
+      class="absolute w-[28%] top-[53%] left-[35%] tb-link cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105"
+      data-target="750ml Round Container" data-audio-path="../audios/750ml Round Container.mp3" />
+    <img src="../images/page_2/Line.webp" alt="line" class="absolute w-[50%] top-[55%] left-[35%] cursor-pointer" />
+    <img src="../images/page_2/07.webp" alt="07" class="absolute w-[3%] top-[54%] right-[10%] cursor-pointer" /> -->
+
+    <!-- -------------10------------- -->
+    <!-- <img src="../images/page_2/750ml Rectangular Container.webp" alt="120ml Round Container"
+      class="absolute w-[35%] top-[59%] left-[35%] tb-link cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105"
+      data-target="750ml Round Container" data-audio-path="../audios/750ml Rectangular Container.mp3" />
+    <img src="../images/page_2/Line.webp" alt="line" class="absolute w-[50%] top-[61%] left-[35%] cursor-pointer" />
+    <img src="../images/page_2/07.webp" alt="07" class="absolute w-[3%] top-[60%] right-[10%] cursor-pointer" /> -->
+
+    <!-- -------------11------------- -->
+    <!-- <img src="../images/page_2/250gms Sweet Box.webp" alt="120ml Round Container"
+      class="absolute w-[23%] top-[65%] left-[35%] tb-link cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105"
+      data-target="250gms Sweet Box" data-audio-path="../audios/250gms Sweet Box.mp3" />
+    <img src="../images/page_2/Line.webp" alt="line" class="absolute w-[50%] top-[67%] left-[35%] cursor-pointer" />
+    <img src="../images/page_2/08.webp" alt="08" class="absolute w-[3%] top-[66%] right-[10%] cursor-pointer" /> -->
+
+    <!-- -------------12------------- -->
+    <!-- <img src="../images/page_2/250gms Sweet BoxTE.webp" alt="120ml Round Container"
+      class="absolute w-[26%] top-[71%] left-[35%] tb-link cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105"
+      data-target="250gms Sweet Box" data-audio-path="../audios/250gms Sweet BoxTE.mp3" />
+    <img src="../images/page_2/Line.webp" alt="line" class="absolute w-[50%] top-[73%] left-[35%] cursor-pointer" />
+    <img src="../images/page_2/08.webp" alt="08" class="absolute w-[3%] top-[72%] right-[10%] cursor-pointer" /> -->
+
+    <!-- -------------13------------- -->
+    <!-- <img src="../images/page_2/500gms Sweet Box.webp" alt="120ml Round Container"
+      class="absolute w-[23%] top-[77%] left-[35%] tb-link cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105"
+      data-target="500gms Sweet Box" data-audio-path="../audios/500gms Sweet Box.mp3" />
+    <img src="../images/page_2/Line.webp" alt="line" class="absolute w-[50%] top-[79%] left-[35%] cursor-pointer" />
+    <img src="../images/page_2/09.webp" alt="09" class="absolute w-[3%] top-[78%] right-[10%] cursor-pointer" /> -->
+
+    <!-- -------------14------------- -->
+    <!-- <img src="../images/page_2/500gms Sweet BoxTE.webp" alt="120ml Round Container"
+      class="absolute w-[26%] top-[83%] left-[35%] tb-link cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105"
+      data-target="500gms Sweet Box" data-audio-path="../audios/500gms Sweet BoxTE.mp3" />
+    <img src="../images/page_2/Line.webp" alt="line" class="absolute w-[50%] top-[85%] left-[35%] cursor-pointer" />
+    <img src="../images/page_2/09.webp" alt="09" class="absolute w-[3%] top-[84%] right-[10%] cursor-pointer" /> -->
+
+    <!-- -------------15------------- -->
+    <!-- <img src="../images/page_2/1kg Sweet Box.webp" alt="120ml Round Container"
+      class="absolute w-[18%] top-[89%] left-[35%] tb-link cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105"
+      data-target="1kg Sweet Box" data-audio-path="../audios/1kg Sweet Box.mp3" />
+    <img src="../images/page_2/Line.webp" alt="line" class="absolute w-[50%] top-[91%] left-[35%] cursor-pointer" />
+    <img src="../images/page_2/10.webp" alt="10" class="absolute w-[3%] top-[90%] right-[10%] cursor-pointer" /> -->
+
+    <!-- -------------16------------- -->
+    <!-- <img src="../images/page_2/1000ml Round.webp" alt="120ml Round Container"
+      class="absolute w-[18%] top-[95%] left-[35%] tb-link cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105"
+      data-target="1kg Sweet Box" data-audio-path="../audios/1000ml Round.mp3" />
+    <img src="../images/page_2/Line.webp" alt="line" class="absolute w-[50%] top-[97%] left-[35%] cursor-pointer" />
+    <img src="../images/page_2/10.webp" alt="10" class="absolute w-[3%] top-[96%] right-[10%] cursor-pointer" /> -->
+
+
+<div id="svg_container" class="">
+
+        </div>
+
+  </div>
+
+  <!-- ==========================page 2 end=============================================== -->
+  <!-- ==========================page 3 start=============================================== -->
+
+  <div class="page relative " id="about-us">
+    <img src="../images/white_blank.webp" alt="white_page" class=" w-[100%] top-[0] right-[0] white-page" />
+    <div class="revealimage">
+      
+  <img src="../images/page_3_new/about_us.png" alt="" class="absolute profile_text">
+  <img src="../images/page_3_new/welcome_text.svg" alt="" class="absolute profile_welcome">
+  <img src="../images/page_3_new/branding_possibilities.svg" alt="" class="absolute profile_brand">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/KmKxpD-rhu8?si=ozj_ClI_iMXw8-xn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="youtube_link"></iframe>
+  <img src="../images/Page_3/02.webp" alt="02" class="absolute bottom-[2%] right-[50%] w-[2.5%] line-reveal31"/>
+  <a class="cursor-pointer" target="_blank" href="https://terratechpacks.com/"><img src="../images/Page_3/terratechpacks.com.webp" alt="mail" class="absolute bottom-[2%] left-[5%] w-[20%] line-reveal31"/></a>
+</div>
+   
+  </div>
+
+  <!-- ==========================page 3 end=============================================== -->
+  <!-- ==========================page 4 start=============================================== -->
+
+  <div class="page relative" id="120ml Round Container">
+    <img src="../images/white_blank.webp" alt="white_page" class=" w-[100%] top-[0] right-[0] white-page" />
+    <div class="revealimage">
+  <img src="../images/model_images_new/round_containers.svg" alt="round_containers" class="absolute top-[7%] left-[7%] w-[35%] page-4-right"/>
+  <img src="../images/text-images-new/120-ml-round-title.webp" alt="120-ml-title" class="absolute top-[7%] right-[5%] w-[45%] page-4-right h-[6%]"/>
+  <img src="../images/text-images-new/120-ml-round-text.svg" alt="120-ml-text" class="absolute top-[19%] right-[5%] w-[45%] page-4-right"/>
+  <img src="../images/Pause GIF image.gif" alt="click-here" class="absolute top-[12%] left-[20%] w-[10%]"/>
+  <a target="_blank" href="../lightBox/index.html#120-ml-round"> <img src="../images/model_images_new/120_ml_round.svg" alt="120-ml-container" class="absolute top-[20%] left-[5%] w-[40%] page-4-right"/></a>
+  <img src="../images/text-images-new/250-ml-round-title.webp" alt="250-ml-title" class="absolute top-[57%] left-[5%] w-[45%] page-4-left h-[6%]  "/>
+  <img src="../images/text-images-new/120-ml-round-text.svg" alt="250-ml-text" class="absolute top-[67%] left-[5%] w-[45%] page-4-left"/>
+   <img src="../images/Pause GIF image.gif" alt="click-here" class="absolute top-[58%] right-[20%] w-[10%]"/>
+  <a target="_blank" href="../lightBox/index.html#250-ml-round"><img src="../images/model_images_new/250_ml_round.svg" alt="250-ml-container" class="absolute bottom-[8%] right-[7%] w-[40%] page-4-left"/></a>
+  <img src="../images/page_4/03.webp" alt="03" class="absolute bottom-[2%] left-[50%] w-[2.5%]"/>
+    </div>
+       
+
+  </div>
+
+
+  <!-- ==========================page 4 end=============================================== -->
+  <!-- ==========================page 5 start=============================================== -->
+
+  <div class="page relative" id="250ml Glass Round">
+    <img src="../images/white_blank.webp" alt="white_page" class=" w-[100%] top-[0] right-[0] white-page" />
+    <div class="revealimage">
+    <img src="../images/text-images-new/250-ml-round-glass-title.webp" alt="120-ml-title" class="absolute top-[7%] right-[5%] w-[45%] page-5-right h-[6%] "/>
+  <img src="../images/text-images-new/250-ml-round-glass-text.svg" alt="120-ml-text" class="absolute top-[19%] right-[5%] w-[45%] page-5-right"/>
+   <img src="../images/Pause GIF image.gif" alt="click-here" class="absolute top-[12%] left-[20%] w-[10%]"/>
+  <a target="_blank" href="../lightBox/index.html#250ml-glass-round" ><img src="../images/model_images_new/250_gls_img.svg" alt="120-ml-container" class="absolute top-[20%] left-[5%] w-[40%] page-5-right"/></a>
+  <img src="../images/text-images-new/300-ml-round-title.webp" alt="250-ml-title" class="absolute top-[57%] left-[5%] w-[45%] page-5-left h-[6%] "/>
+  <img src="../images/text-images-new/300-ml-round-text.svg" alt="250-ml-text" class="absolute top-[67%] left-[5%] w-[45%] page-5-left"/>
+   <img src="../images/Pause GIF image.gif" alt="click-here" class="absolute top-[58%] right-[20%] w-[10%]"/>
+  <a target="_blank" href="../lightBox/index.html#300-ml-round"><img src="../images/model_images_new/300_imgs.svg" alt="250-ml-container" class="absolute bottom-[8%] right-[7%] w-[40%] page-5-left"/></a>
+  <img src="../images/page_5/04.webp" alt="04" class="absolute bottom-[2%] left-[50%] w-[2.5%]"/>
+    </div>
+
+  </div>
+
+
+  <!-- ==========================page 5 end=============================================== -->
+  <!-- ==========================page 6 start=============================================== -->
+
+  <div class="page relative" id="450ml Round Container">
+    <img src="../images/white_blank.webp" alt="white_page" class=" w-[100%] top-[0] right-[0] white-page" />
+    <div class="revealimage">
+    <img src="../images/text-images-new/450-ml-round-title.webp" alt="120-ml-title" class="absolute top-[7%] right-[5%] w-[45%] page-6-right h-[6%] "/>
+  <img src="../images/text-images-new/450-ml-round-text.svg" alt="120-ml-text" class="absolute top-[19%] right-[5%] w-[45%] page-6-right"/>
+  <img src="../images/Pause GIF image.gif" alt="click-here" class="absolute top-[12%] left-[20%] w-[10%]"/>
+  <a target="_blank" href="../lightBox/index.html#500gms-450ml-container" ><img src="../images/model_images_new/450_img.svg" alt="120-ml-container" class="absolute top-[20%] left-[5%] w-[43%] page-6-right"/></a>
+  <img src="../images/text-images-new/500-ml-square-title.webp" alt="250-ml-title" class="absolute top-[57%] left-[5%] w-[50%] page-6-left h-[6%] "/>
+  <img src="../images/text-images-new/500-ml-square-text.svg" alt="250-ml-text" class="absolute top-[67%] left-[5%] w-[45%] page-6-left"/>
+  <img src="../images/Pause GIF image.gif" alt="click-here" class="absolute top-[58%] right-[20%] w-[10%]"/>
+  <a target="_blank" href="../lightBox/index.html#500ml-container"><img src="../images/model_images_new/500ml_sq_img.svg" alt="250-ml-container" class="absolute bottom-[8%] right-[7%] w-[40%] page-6-left"/></a>
+  <img src="../images/page_6/05.webp" alt="05" class="absolute bottom-[2%] left-[50%] w-[2.5%]"/>
+    </div>
+
+  </div>
+
+  <!-- ==========================page 6 end=============================================== -->
+  <!-- ==========================page 7 start=============================================== -->
+
+  <div class="page relative" id="500ml round Container">
+    <img src="../images/white_blank.webp" alt="white_page" class=" w-[100%] top-[0] right-[0] white-page" />
+    <div class="revealimage">
+   <img src="../images/text-images-new/500-ml-round-title.webp" alt="120-ml-title" class="absolute top-[7%] right-[5%] w-[45%] page-7-right h-[6%] " />
+  <img src="../images/text-images-new/500-ml-round-text.svg" alt="120-ml-text" class="absolute top-[19%] right-[5%] w-[45%] page-7-right"/>
+  <img src="../images/Pause GIF image.gif" alt="click-here" class="absolute top-[12%] left-[20%] w-[10%]"/>
+  <a target="_blank" href="../lightBox/index.html#500ml-round-container" ><img src="../images/model_images_new/500ml_round_img.svg" alt="120-ml-container" class="absolute top-[20%] left-[5%] w-[40%] page-7-right"/></a>
+
+  <img src="../images/text-images-new/750-ml-round-title.webp" alt="250-ml-title" class="absolute top-[57%] left-[5%] w-[45%] page-7-left h-[6%] "/>
+  <img src="../images/text-images-new/750-ml-round-text.svg" alt="250-ml-text" class="absolute top-[67%] left-[5%] w-[45%] page-7-left"/>
+  <img src="../images/Pause GIF image.gif" alt="click-here" class="absolute top-[58%] right-[20%] w-[10%]"/>
+  <a target="_blank" href="../lightBox/index.html#750ml-round-container"><img src="../images/model_images_new/750ml_round_img.svg" alt="250-ml-container" class="absolute bottom-[6%] right-[7%] w-[38%] page-7-left"/></a>
+  <img src="../images/page_7/06.webp" alt="06" class="absolute bottom-[2%] left-[50%] w-[2.5%]"/>
+    </div>
+
+  </div>
+
+  <!-- ==========================page 7 end=============================================== -->
+  <!-- ==========================page 8 start=============================================== -->
+
+  <div class="page relative" id="1000ml Round Container">
+    <img src="../images/white_blank.webp" alt="white_page" class=" w-[100%] top-[0] right-[0] white-page" />
+    <div class="revealimage">
+   <img src="../images/text-images-new/1000-ml-round-title.webp" alt="120-ml-title" class="absolute top-[7%] right-[5%] w-[45%] page-8-right h-[6%] "/>
+  <img src="../images/text-images-new/1000-ml-round-text.svg" alt="120-ml-text" class="absolute top-[19%] right-[5%] w-[45%] page-8-right"/>
+  <img src="../images/Pause GIF image.gif" alt="click-here" class="absolute top-[12%] left-[20%] w-[10%]"/>
+  <a target="_blank" href="../lightBox/index.html#1000-ml-round" ><img src="../images/model_images_new/1000ml_round_img.svg" alt="120-ml-container" class="absolute top-[20%] left-[5%] w-[40%] page-8-right"/></a>
+ <img src="../images/model_images_new/rectangular.svg" alt="rectangle_containers" class="absolute top-[54%] right-[8%] w-[35%] page-8-left"/>
+  <img src="../images/text-images-new/500-ml-rectangular-title.webp" alt="250-ml-title" class="absolute top-[57%] left-[5%] w-[45%] page-8-left h-[6%] "/>
+  <img src="../images/text-images-new/500-ml-rectangular-text.svg" alt="250-ml-text" class="absolute top-[67%] left-[5%] w-[45%] page-8-left"/>
+  <img src="../images/Pause GIF image.gif" alt="click-here" class="absolute top-[62%] right-[20%] w-[10%]"/>
+  <a target="_blank" href="../lightBox/index.html#500ml-rectangular-container"><img src="../images/model_images_new/500ml_rectangular_img.svg" alt="250-ml-container" class="absolute bottom-[8%] right-[5%] w-[40%] page-8-left"/></a>
+  <img src="../images/page_8/07.webp" alt="07" class="absolute bottom-[2%] left-[50%] w-[2.5%]"/>
+    </div>
+
+  </div>
+
+  <!-- ==========================page 8 end=============================================== -->
+  <!-- ==========================page 9 start=============================================== -->
+
+  <div class="page relative" id="750ml rectangle_container">
+    <img src="../images/white_blank.webp" alt="white_page" class=" w-[100%] top-[0] right-[0] white-page" />
+    <div class="revealimage">
+     <img src="../images/text-images-new/750-ml-rectangular-title.webp" alt="120-ml-title" class="absolute top-[7%] right-[5%] w-[45%] page-9-right h-[6%] "/>
+  <img src="../images/text-images-new/750-ml-rectangular-text.svg" alt="120-ml-text" class="absolute top-[19%] right-[5%] w-[45%] page-9-right"/>
+  <img src="../images/Pause GIF image.gif" alt="click-here" class="absolute top-[12%] left-[20%] w-[10%]"/>
+  <a target="_blank" href="../lightBox/index.html#750ml-rectangular-container" ><img src="../images/model_images_new/750ml_rectangular_img.svg" alt="120-ml-container" class="absolute top-[20%] left-[5%] w-[40%] page-9-right"/></a>
+    <img src="../images/model_images_new/sweet_box.svg" alt="sweet_box" class="absolute top-[54%] right-[15%] w-[20%] page-9-left"/>
+  <img src="../images/text-images-new/250-gms-sweet-title.webp" alt="250-ml-title" class="absolute top-[57%] left-[5%] w-[45%] page-9-left h-[6%] "/>
+  <img src="../images/text-images-new/250-gms-sweet-text.svg" alt="250-ml-text" class="absolute top-[67%] left-[5%] w-[45%] page-9-left"/>
+  <img src="../images/Pause GIF image.gif" alt="click-here" class="absolute top-[58%] right-[20%] w-[10%]"/>
+  <a target="_blank" href="../lightBox/index.html#250-gms-sweet"><img src="../images/model_images_new/250gms_img.svg" alt="250-ml-container" class="absolute bottom-[5%] right-[7%] w-[40%] page-9-left"/></a>
+  <img src="../images/page_9/08.webp" alt="08" class="absolute bottom-[2%] left-[50%] w-[2.5%]"/>
+    </div>
+
+  </div>
+
+  <!-- ==========================page 9 end=============================================== -->
+  <!-- ==========================page 10 start=============================================== -->
+
+  <div class="page relative" id="500gms Sweet Box">
+    <img src="../images/white_blank.webp" alt="white_page" class=" w-[100%] top-[0] right-[0] white-page" />
+    <div class="revealimage">
+       <img src="../images/text-images-new/500-gms-sweet-title.webp" alt="120-ml-title" class="absolute top-[7%] right-[5%] w-[45%] page-10-right h-[6%] "/>
+  <img src="../images/text-images-new/500-gms-sweet-text.svg" alt="120-ml-text" class="absolute top-[19%] right-[5%] w-[45%] page-10-right"/>
+  <img src="../images/Pause GIF image.gif" alt="click-here" class="absolute top-[12%] left-[20%] w-[10%]"/>
+  <a target="_blank" href="../lightBox/index.html#500gms-sweet-box" ><img src="../images/model_images_new/500gms_img.svg" alt="120-ml-container" class="absolute top-[22%] left-[3%] w-[44%] page-10-right"/></a>
+  <img src="../images/text-images-new/1-kg-sweet-title.webp" alt="250-ml-title" class="absolute top-[57%] left-[5%] w-[45%] page-10-left h-[6%] "/>
+  <img src="../images/text-images-new/1-kg-sweet-text.svg" alt="250-ml-text" class="absolute top-[67%] left-[5%] w-[45%] page-10-left"/>
+  <img src="../images/Pause GIF image.gif" alt="click-here" class="absolute top-[58%] right-[20%] w-[10%]"/>
+  <a target="_blank" href="../lightBox/index.html#1000gms-sweet-box"><img src="../images/model_images_new/1kg_gms_img.svg" alt="250-ml-container" class="absolute bottom-[8%] right-[5%] w-[38%] page-10-left"/></a>
+  <img src="../images/page_10/09.webp" alt="09" class="absolute bottom-[2%] left-[50%] w-[2.5%]"/>
+    </div>
+
+  </div>
+
+  <!-- ==========================page 10 end=============================================== -->
+  <!-- ==========================page 11 start=============================================== -->
+
+  <div class="page relative" id="250gms Sweet Box">
+    <img src="../images/white_blank.webp" alt="white_page" class=" w-[100%] top-[0] right-[0] white-page" />
+    <div class="revealimage">
+       <img src="../images/model_images_new/tamper_evident.svg" alt="tamper_evident" class="absolute top-[7%] left-[10%] w-[30%] page-11-right"/>
+  <img src="../images/text-images-new/250-gms-sweet-TE-title.webp" alt="120-ml-title" class="absolute top-[7%] right-[5%] w-[45%] page-11-right h-[6%] "/>
+  <img src="../images/text-images-new/250-gms-sweet-TE-text.svg" alt="120-ml-text" class="absolute top-[19%] right-[5%] w-[45%] page-11-right"/>
+  <img src="../images/Pause GIF image.gif" alt="click-here" class="absolute top-[12%] left-[20%] w-[10%]"/>
+  <a target="_blank" href="../lightBox/index.html#250_gms_te_sb" ><img src="../images/model_images_new/250gms_te_img.svg" alt="120-ml-container" class="absolute top-[22%] left-[5%] w-[40%] page-11-right"/></a>
+  <img src="../images/text-images-new/500-gms-sweet-TE-title.webp" alt="250-ml-title" class="absolute top-[57%] left-[5%] w-[45%] page-11-left h-[6%] "/>
+  <img src="../images/text-images-new/500-gms-sweet-TE-text.svg" alt="250-ml-text" class="absolute top-[67%] left-[5%] w-[45%] page-11-left"/>
+  <img src="../images/Pause GIF image.gif" alt="click-here" class="absolute top-[58%] right-[20%] w-[10%]"/>
+  <a target="_blank" href="../lightBox/index.html#500_gms_te_sb"><img src="../images/model_images_new/500gms_te_img.svg" alt="250-ml-container" class="absolute bottom-[10%] right-[5%] w-[45%] page-11-left"/></a>
+  <img src="../images/page_11/10.webp" alt="10" class="absolute bottom-[2%] left-[50%] w-[2.5%]"/>
+    </div>
+
+  </div>
+
+
+  <!-- ==========================page 11 end=============================================== -->
+  <!-- ==========================page 12 start=============================================== -->
+
+  <div class="page relative" id="contact-us">
+    <img src="../images/white_blank.webp" alt="white_page" class=" w-[100%] top-[0] right-[0] white-page" />
+    <div class="revealimage">
+      <img src="../images/page_12/contact-img.webp" alt="workplace" class="absolute top-[0] left-[0]"/>
+  <img src="../images/page_12/Contact Us.webp" alt="contact-us" class="absolute bottom-[40%] left-[30%] w-[35%]"/>
+  <!-- <img src="../images/page_12/opening_new.png" alt="opening" class="absolute bottom-[26%] right-[12%] w-[29%] page-12-right"/> -->
+  <img src="../images/page_12/Office Address.svg" alt="office-address" class="absolute bottom-[34%] left-[5%] w-[35%] page-12-left"/>
+  <img src="../images/page_12/location.svg" alt="location" class="absolute bottom-[25%] left-[5%] w-[60%] page-12-right"/>
+  <img src="../images/page_12/phone-icon.webp" alt="phone" class="absolute bottom-[20%] left-[5%] w-[4%] page-12-left"/>
+  <img src="../images/page_12/number-1.svg" alt="phone-number" class="absolute bottom-[21%] left-[10%] w-[17%] page-12-left"/>
+  <img src="../images/page_12/number-2.svg" alt="phone-number" class="absolute bottom-[21%] left-[29%] w-[16%] page-12-left"/>
+<a href="mailto:terratechpacks@gmail.com">
+  <img src="../images/page_12/email.svg" alt="email"
+       class="absolute bottom-[29%] right-[5%] w-[40%] page-12-right" />
+</a>
+  <a href="https://terratechpacks.com/" target="_blank"><img src="../images/page_12/website.svg" alt="website" class="absolute bottom-[24%] right-[5%] w-[40%] page-12-right"/></a>
+  <iframe class="absolute bottom-[4%] right-[5%] w-[90%] h-[15%] page-12-right" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3917.1574683116733!2d76.95185237504442!3d10.951475189208146!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba85b6841a218f7%3A0x825be0e2a0d59933!2sTerra%20Tech%20Packs!5e0!3m2!1sen!2sin!4v1757066739807!5m2!1sen!2sin" width="600" height="450" style="border:0; " allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  
+ <a class="cursor-pointer" target="_blank" href="https://www.fist-o.com/"><p class="absolute bottom-[1%] right-[5%] text-gray-500 text-xs page-12-right">Designed by Fist-o Pvt Ltd</p></a> 
+
+    </div>
+
+
+
+  </div>
+
+  <!-- ==========================page 12 end=============================================== -->
+
+  <!-- -------------------------------nav audio and scroll trigger-------------------- -->
+  <audio id="infoAudio" preload="auto"></audio>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+  <audio id="infoAudio"></audio>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const tocLinks = document.querySelectorAll('.tb-link'); // all li items
+      const audio = document.getElementById('infoAudio');     // audio element
+
+      tocLinks.forEach(function (link) {
+        link.addEventListener('click', function (e) {
+          e.preventDefault();
+
+          const targetId = this.getAttribute('data-target');       // section id
+          const audioPath = this.getAttribute('data-audio-path');  // audio file path
+          const targetEl = document.getElementById(targetId);
+
+          // Smooth scroll to section
+          if (targetEl) {
+            targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+
+          // Play audio
+          if (audioPath && audio) {
+            audio.src = audioPath;
+            audio.currentTime = 0; // restart from beginning
+            audio.play().catch(err => {
+              console.log("Audio play error:", err);
+            });
+          }
+        });
+      });
+    });
+  </script>
+
+<script>
+  fetch('../images/table_of_content/table-of-content.svg')
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById('svg_container').innerHTML = data
+  })
+  .catch(e => {console.log(e)})
+</script>
+
+
+<script>
+  document.getElementById("whatsappShareBtn").addEventListener("click", function () {
+    const pageUrl = document.getElementById("shareInput").value || window.location.href;
+    const whatsappUrl = "https://wa.me/?text=" + encodeURIComponent(pageUrl);
+    window.open(whatsappUrl, "_blank");
+  });
+</script>
+
+
+
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  // Reusable audio player
+  const audio = document.createElement("audio");
+  document.body.appendChild(audio);
+
+  // Load the SVG
+  fetch('../images/table_of_content/table-of-content.svg')
+    .then(response => response.text())
+    .then(data => {
+      const svgContainer = document.getElementById('svg_container');
+      svgContainer.innerHTML = data;
+
+      // Attach click to every element with an ID inside SVG
+      svgContainer.querySelectorAll("[id]").forEach(el => {
+        el.style.cursor = "pointer";
+
+        el.addEventListener("click", () => {
+          const itemId = el.id;
+
+          let targetPageId = null;
+          let audioPath = null;
+
+          // ---- Mapping ----
+            if (itemId === "120_ml_Round_Container") {
+            targetPageId = "120ml Round Container"; 
+            audioPath = "../audios/120ml Round Container.mp3";
+          } 
+          else if (itemId === "250_ml_Round_Container") {
+            targetPageId = "120ml Round Containe";
+            audioPath = "../audios/250ml Round Container.mp3";
+          } 
+          else if (itemId === "250_ml_Glass_Round") {
+            targetPageId = "250ml Glass Round";
+            audioPath = "../audios/250ml Glass Round.mp3";
+          } 
+          else if (itemId === "300_ml_Round_Container") {
+            targetPageId = "250ml Glass Round";
+            audioPath = "../audios/300ml Round Container.mp3";
+          } 
+          else if (itemId === "500_gms_450_ml_Container") {
+            targetPageId = "450ml Round Container";
+            audioPath = "../audios/500gms , 450ml Container.mp3";
+          } 
+          else if (itemId === "500_ml_Round_Square_Container") {
+            targetPageId = "450ml Round Container";
+            audioPath = "../audios/500ml Square Container.mp3";
+          } 
+          else if (itemId === "500_ml_Round_Container") {
+            targetPageId = "500ml round Container";
+            audioPath = "../audios/500ml Round Container.mp3";
+          }
+          else if (itemId === "750_ml_Round_Container") {
+            targetPageId = "500ml round Container";
+            audioPath = "../audios/750ml Round Container.mp3";
+          }
+          else if (itemId === "1000_ml_Round") {
+            targetPageId = "1000ml Round Container";
+            audioPath = "../audios/1000ml Round.mp3";
+          }
+          else if (itemId === "500_ml_Rectangular_Container") {
+            targetPageId = "1000ml Round Container";
+            audioPath = "../audios/500ml Rectangular Container.mp3";
+          }
+          else if (itemId === "750_ml_Rectangular_Container") {
+            targetPageId = "750ml rectangle_container";
+            audioPath = "../audios/750ml Rectangular Container.mp3";
+          }
+          else if (itemId === "250_gms_Sweet_Box") {
+            targetPageId = "750ml rectangle_container";
+            audioPath = "../audios/250gms Sweet Box.mp3";
+          }
+          else if (itemId === "500_gms_Sweet_Box") {
+            targetPageId = "500gms Sweet Box";
+            audioPath = "../audios/500gms Sweet Box.mp3";
+          }
+          else if (itemId === "1kg_Sweet_Box") {
+            targetPageId = "500gms Sweet Box";
+            audioPath = "../audios/1kg Sweet Box.mp3";
+          }
+          else if (itemId === "TE_250gms_Sweet_Box") {
+            targetPageId = "250gms Sweet Box";
+            audioPath = "../audios/250gms Sweet BoxTE.mp3";
+          }
+          else if (itemId === "TE_500gms_Sweet_Box") {
+            targetPageId = "250gms Sweet Box";
+            audioPath = "../audios/500gms Sweet BoxTE.mp3";
+          }
+          // 👉 keep adding your mappings
+
+          // ---- Scroll trigger ----
+          if (targetPageId) {
+            const targetEl = document.getElementById(targetPageId);
+            if (targetEl) {
+              targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+          }
+
+          // ---- Play audio ----
+          if (audioPath) {
+            audio.src = audioPath;
+            audio.currentTime = 0;
+            audio.play().catch(err => console.log("Audio error:", err));
+          }
+        });
+      });
+    })
+    .catch(e => console.log("SVG load error:", e));
+});
+</script>
+
+
+  <!-- -----------------------------------------------------  -->
+  <script src="./script.js"></script>
+
+
+</body>
+
+</html>

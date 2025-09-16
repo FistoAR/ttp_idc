@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+* {
+     font-family: "Montserrat", sans-serif;
+}
+
+.d-none {
+    display: none !important;
+}
+
+#preview {
+    width: 50%;
+    height: 80%;
+    position: absolute;
+}
+
+.bottom-absolute {
+    position: absolute;
+    top: 25%;
+
+}
+
+.flex-container {
+    /* display: flex; */
+    width: fit-content;
+    /* align-self: start;
+    justify-self: start; */
+
+}
+
+.flex-col {
+   
+    /* display: flex; */
+    
+    /* align-items: center;
+    justify-content: center; */
+    gap: 10%;
+    width: auto;
+    
+}
+
+.flex-col img {
+    position: unset !important;
+    max-height: 70px !important; 
+    cursor: pointer;
+    user-select: none;
+    width: auto;
+    
+    
+    
+}
+
+.flex-col p {
+    font-weight: bold;
+    font-size: 1vw;
+    padding: .5vw;
+    margin: .5em ;
+    
+}
+
+.flex-col:last-child img {
+    cursor: pointer;
+}
+
+.flex-col:last-child p {
+    pointer-events: none;
+    /* opacity: 0; */
+}
+
+/* .text{
+    margin-left: 150px;
+    background-color: brown;
+} */
+@media screen and (max-width: 991px) {
+    .bottom-absolute {
+        bottom: 1%;
+        top: unset;
+    }
+    .flex-container {
+        width: 100%;
+        flex-wrap: wrap;
+        flex-direction: row;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .flex-col {
+        width: 50%;
+        flex: 1;
+        
+        margin-bottom: 1.5em;
+    }
+    .flex-col p {
+        font-weight: bold;
+        font-size: 1rem;
+    }
+    
+/* .flex-container {
+    display: flex;
+    width: 50%;
+    align-self: center;
+    justify-self: center;
+}
+
+.flex-col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10%;
+}
+
+.flex-col img {
+    position: unset !important;
+    max-height: 70px !important; 
+    cursor: pointer;
+    user-select: none;
+} */
+}
+
+
+
+
+.flex-col{
+    margin-left: 10px;
+}
+.flex-col:first-child{
+    margin-left: 0;
+}
+

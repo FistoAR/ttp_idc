@@ -1,0 +1,86 @@
+<div class="page relative">
+
+          <img src="../images/page_2/side-bar.webp" alt="side-bar" class="absolute top-0 left-0 h-[100%]"/>
+          
+          <img src="../images/page_2/120ml Round Container.webp" alt="120ml Round Container" class="container-01 link-text tb-link" data-page="4" data-audio-path="../audios/120ml Round Container.mp3"/>
+          <img src="../images/page_2/Line.webp" alt="line" class="line-01"/>
+          <img src="../images/page_2/03.webp" alt="03" class="number-01"/>
+
+
+          <img src="../images/page_2/250ml Round Container.webp" alt="250ml Round Container" class="container-02 link-text tb-link" data-page="4" data-audio-path="../audios/250ml Round Container.mp3"/>
+          <img src="../images/page_2/Line.webp" alt="line" class="line-02"/>
+          <img src="../images/page_2/03.webp" alt="03" class="number-02"/>
+
+
+          <img src="../images/page_2/250ml Glass Round.webp" alt="250ml Glass Round" class="container-03 link-text tb-link" data-page="4" data-audio-path="../audios/250ml Glass Round.mp3"/>
+          <img src="../images/page_2/Line.webp" alt="line" class="line-03"/>
+          <img src="../images/page_2/04.webp" alt="04" class="number-03"/>
+
+
+          <img src="../images/page_2/300ml Round Container  .webp" alt="300ml Round Container" class="container-04 link-text tb-link" data-page="4" data-audio-path="../audios/300ml Round Container.mp3"/>
+          <img src="../images/page_2/Line.webp" alt="line" class="line-04"/>
+          <img src="../images/page_2/04.webp" alt="04" class="number-04"/>
+
+
+          <img src="../images/page_2/500ml Round Container.webp" alt="500ml Round Container" class="container-05 link-text tb-link" data-page="6" data-audio-path="../audios/500ml Round Container.mp3"/>
+          <img src="../images/page_2/Line.webp" alt="line" class="line-05"/>
+          <img src="../images/page_2/05.webp" alt="05" class="number-05"/>
+
+
+          <img src="../images/page_2/450ml Container.webp" alt="450ml Container" class="container-06 link-text tb-link" data-page="6" data-audio-path="../audios/500gms , 450ml Container.mp3"/>
+          <img src="../images/page_2/Line.webp" alt="line" class="line-06"/>
+          <img src="../images/page_2/05.webp" alt="05" class="number-06"/>
+
+
+          <img src="../images/page_2/500ml Square Container.webp" alt="500ml Square Container" class="container-07 link-text tb-link" data-page="6" data-audio-path="../audios/500ml Square Container.mp3"/>
+          <img src="../images/page_2/Line.webp" alt="line" class="line-07"/>
+          <img src="../images/page_2/06.webp" alt="06" class="number-07"/>
+
+
+          <img src="../images/page_2/500ml Rectangular Container.webp" alt="500ml Rectangular Container" class="container-08 link-text tb-link" data-page="6" data-audio-path="../audios/500ml Rectangular Container.mp3"/>
+          <img src="../images/page_2/Line.webp" alt="line" class="line-08"/>
+          <img src="../images/page_2/06.webp" alt="06" class="number-08"/>
+
+
+          <img src="../images/page_2/750ml Round Container.webp" alt="750ml Round Container" class="container-09 link-text tb-link" data-page="8" data-audio-path="../audios/750ml Round Container.mp3"/>
+          <img src="../images/page_2/Line.webp" alt="line" class="line-09"/>
+          <img src="../images/page_2/07.webp" alt="07" class="number-09"/>
+
+
+          <img src="../images/page_2/750ml Rectangular Container.webp" alt="750ml Rectangular Container" class="container-10 link-text tb-link" data-page="8" data-audio-path="../audios/750ml Rectangular Container.mp3"/>
+          <img src="../images/page_2/Line.webp" alt="line" class="line-10"/>
+          <img src="../images/page_2/07.webp" alt="07" class="number-10"/>
+
+
+          <img src="../images/page_2/250gms Sweet Box.webp" alt="250gms Sweet Box" class="container-11 link-text tb-link" data-page="8" data-audio-path="../audios/250gms Sweet Box.mp3"/>
+          <img src="../images/page_2/Line.webp" alt="line" class="line-11"/>
+          <img src="../images/page_2/08.webp" alt="08" class="number-11"/>
+
+
+          <img src="../images/page_2/250gms Sweet BoxTE.webp" alt="250gms Sweet BoxTE" class="container-12 link-text tb-link" data-page="8" data-audio-path="../audios/250gms Sweet BoxTE.mp3"/>
+          <img src="../images/page_2/Line.webp" alt="line" class="line-12"/>
+          <img src="../images/page_2/08.webp" alt="08" class="number-12"/>
+
+
+          <img src="../images/page_2/500gms Sweet Box.webp" alt="500gms Sweet Box" class="container-13 link-text tb-link" data-page="10" data-audio-path="../audios/500gms Sweet Box.mp3"/>
+          <img src="../images/page_2/Line.webp" alt="line" class="line-13"/>
+          <img src="../images/page_2/09.webp" alt="09" class="number-13"/>
+
+
+          <img src="../images/page_2/500gms Sweet BoxTE.webp" alt="500gms Sweet BoxTE" class="container-14 link-text tb-link" data-page="10" data-audio-path="../audios/500gms Sweet BoxTE.mp3"/>
+          <img src="../images/page_2/Line.webp" alt="line" class="line-14"/>
+          <img src="../images/page_2/09.webp" alt="09" class="number-14"/>
+
+
+          <img src="../images/page_2/1kg Sweet Box.webp" alt="1kg Sweet Box" class="container-15 link-text tb-link" data-page="10" data-audio-path="../audios/1kg Sweet Box.mp3"/>
+          <img src="../images/page_2/Line.webp" alt="line" class="line-15"/>
+          <img src="../images/page_2/10.webp" alt="10" class="number-15"/>
+
+
+          <img src="../images/page_2/1000ml Round.webp" alt="1000ml Round" class="container-16 link-text tb-link" data-page="10" data-audio-path="../audios/1000ml Round.mp3"/>
+          <img src="../images/page_2/Line.webp" alt="line" class="line-16"/>
+          <img src="../images/page_2/10.webp" alt="10" class="number-16"/>
+
+
+
+        </div>

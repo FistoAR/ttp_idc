@@ -1,0 +1,1133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Terra Tech Catalogue</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- External JS dependencies -->
+  <script type="text/javascript" src="assets/js/jquery-2.0.3.min.js"></script>
+  <script type="text/javascript" src="assets/js/underscore-min.js"></script>
+  <script type="text/javascript" src="assets/js/backbone-min.js"></script>
+
+  <!-- Turn.js UI Kit -->
+  <script type="text/javascript" src="assets/js/turn.min.js"></script>
+
+  <!-- App dependencies -->
+  <script type="text/javascript" src="assets/js/app.js"></script>
+
+
+  <!-- External CSS dependencies -->
+  <link type="text/css" rel="stylesheet" href="assets/css/font-awesome.min.css">
+  </link>
+
+
+  <!-- App CSS dependencies -->
+  <link type="text/css" rel="stylesheet" href="./assets/css/main.css">
+  </link>
+
+  <!--  CSS dependencies -->
+  <link type="text/css" rel="stylesheet" href="./assets/css/lightbox.css">
+  </link>
+
+
+  <!------ Fontawesome link  ------->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Tilt+Neon&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="./assets/css/cataloguemain.css">
+
+  <!-- Favicon icon -->
+  <link rel="icon" href="./images/Page-1/logo.png" type="image/x-icon">
+
+  <!-- Fontawesome icon  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">  
+
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style type="text/css">
+    .page-1 .s1 {
+      -webkit-transform: translateY(100px);
+      -webkit-transition: all 1.5s;
+      opacity: 0;
+    }
+
+    .page-1 .s2 {
+      -webkit-transform: translateY(100px);
+      -webkit-transition: all 1s;
+      -webkit-transition-delay: 0.5s;
+      opacity: 0;
+      font-family: 'Carrois Gothic SC', sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 40px;
+      text-align: center;
+      color: white;
+    }
+
+    .page-1.animation-on .s1 {
+      -webkit-transform: translateY(0px);
+      opacity: 1;
+    }
+
+    .page-1.animation-on .s2 {
+      -webkit-transform: translateY(0px);
+      opacity: 1;
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <!-- ***************************************************** DC started *************************************************-->
+
+  <div class="catalog-app">
+    <div id="viewer">
+
+ <button id="navToggle" class="nav-toggle-btn" aria-label="Toggle menu" aria-expanded="false">
+        <span class="hamburger-icon">
+          <span class="hamburger-bar bar1"></span>
+          <span class="hamburger-bar bar2"></span>
+          <span class="hamburger-bar bar3"></span>
+        </span>
+      </button>
+      <!-- Overlay -->
+      <div id="navOverlay" class="nav-overlay"></div>
+      <!-- Floating Table of Contents Nav -->
+      <nav id="tocNav" class="toc-floating" aria-label="Table of Contents">
+        <div class="toc-title">Table of contents</div>
+        <ul class="toc-list">
+          <!-- <li class="tb-link" data-page="1"><a> HOME</a></li>
+          <li class="tb-link" data-page="2"><a> LIST OF SERVICES</a></li> -->
+          <li class="tb-link cursor-pointer" data-page="1" data-audio-path="../audios/home.mp3"><a> Home </a></li>
+          <li class="tb-link cursor-pointer" data-page="2" data-audio-path="../audios/about us.mp3"><a>About us</a></li>
+          <li class="tb-link cursor-pointer" data-page="4" data-audio-path="../audios/products.mp3"><a> Products  </a></li>
+          <li class="tb-link cursor-pointer" data-page="12" data-audio-path="../audios/contact_us.mp3"><a> Contact Us  </a></li>
+          <!-- <li class="tb-link" data-page="28" data-audio-path="../audios/products.mp3"><a> PRODUCTS</a></li>
+          <li class="tb-link" data-page="40" data-audio-path="../audios/contact_us.mp3"><a> CONTACT US</a></li> -->
+        </ul>
+      </nav>
+       <audio id="navAudio"></audio>
+      <button id="shareBtn" class="share-btn" aria-label="Share this page">
+        <!-- Replace the previous SVG in your .share-btn with this: -->
+      <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- White background with green border -->
+  <circle cx="15" cy="15" r="14" fill="#ffffff" stroke="#0f2f1d" stroke-width="2"/>
+  
+  <!-- Share icon in green -->
+  <g>
+    <circle cx="9" cy="15.5" r="2.5" fill="#0f2f1d" />
+    <circle cx="21" cy="8.5" r="2.5" fill="#0f2f1d" />
+    <circle cx="21" cy="21.5" r="2.5" fill="#0f2f1d" />
+    <path d="M11.2 14.2l7.6-4.2M11.2 16.8l7.6 4.2" 
+          stroke="#0f2f1d" stroke-width="1.6" stroke-linecap="round" />
+  </g>
+</svg>
+
+
+
+      </button>
+      <!-- <div class="share-menu" id="shareMenu" role="menu" aria-hidden="true">
+        <div class="share-link-row">
+          <input id="shareInput" type="text">
+          <button id="copyLinkBtn" class="copy-link-btn" role="menuitem">Copy Link</button>
+        </div>
+        <span class="copied-msg" id="copiedMsg">Copied!</span>
+      </div> -->
+<div class="share-menu" id="shareMenu" role="menu" aria-hidden="true">
+  <div class="share-link-row">
+    <input id="shareInput" type="text" value="https://yourwebsite.com" readonly>
+    <button id="copyLinkBtn" class="copy-link-btn" role="menuitem">Copy Link</button>
+  <!-- ✅ WhatsApp Share Button -->
+  <button id="whatsappShareBtn" class="whatsapp-share-btn mr-0 ml-auto cursor-pointer" role="menuitem">
+    <img src=" https://img.icons8.com/fluency/48/whatsapp.png" alt="WhatsApp" width="32" height="32" class="">
+    
+  </button>
+  </div>
+  <span class="copied-msg" id="copiedMsg">Copied!</span>
+
+  
+</div>
+
+
+      <!-- <div class="home-img-container">
+        <i class="fa-solid fa-house"></i>
+      </div> -->
+
+      <div class="full-screen">
+        <i class="fa-solid fa-expand"></i>
+      </div>
+      <div id="flipbook" class="ui-flipbook">
+
+<!-- ===============================page 11 want to replace======================================== -->
+
+<!-- <div class="page relative">
+  
+  <img src="../images/text-images-new/250-ml-round-glass-title.webp" alt="120-ml-title" class="absolute top-[7%] right-[5%] w-[45%] page-5-right h-[6%] "/>
+  <img src="../images/text-images-new/250-ml-round-glass-text.svg" alt="120-ml-text" class="absolute top-[19%] right-[5%] w-[45%] page-5-right"/>
+   <img src="../images/Pause GIF image.gif" alt="click-here" class="absolute top-[12%] left-[20%] w-[10%]"/>
+  <a target="_blank" href="../lightBox/index.html#250ml-glass-round" ><img src="../images/model_images_new/250_gls_img.svg" alt="120-ml-container" class="absolute top-[20%] left-[5%] w-[40%] page-5-right"/></a>
+  <img src="../images/text-images-new/300-ml-round-title.webp" alt="250-ml-title" class="absolute top-[55%] left-[5%] w-[45%] page-5-left h-[6%] "/>
+  <img src="../images/text-images-new/300-ml-round-text.svg" alt="250-ml-text" class="absolute top-[65%] left-[5%] w-[45%] page-5-left"/>
+   <img src="../images/Pause GIF image.gif" alt="click-here" class="absolute top-[58%] right-[20%] w-[10%]"/>
+  <a target="_blank" href="../lightBox/index.html#300-ml-round"><img src="../images/model_images_new/300_imgs.svg" alt="250-ml-container" class="absolute bottom-[8%] right-[7%] w-[40%] page-5-left"/></a>
+  <img src="../images/page_5/04.webp" alt="04" class="absolute bottom-[2%] right-[50%] w-[2.5%]"/>
+</div> -->
+
+
+
+
+
+
+
+
+
+
+<!-- =============================================================================================== -->
+
+ <!-- ==========================page 1 start=============================================== -->
+
+<div class="page relative">
+            <img src="../images/page_1/background_image.webp" alt="background_image" class="absolute top-[0%] left-[0%]"/>
+            <img src="../images/page_1/logo.webp" alt="logo" class="absolute top-[5%] left-[5%] w-[30%]"/>
+            <img src="../images/page_1/green-logo.webp" alt="logo" class="absolute top-[5%] right-[5%] w-[30%]"/>
+            <img src="../images/page_1/heading.webp" alt="heading" class="absolute top-[15%] left-[5%] z-1 w-[78%]"/>
+            <img src="../images/page_1/box-img.webp" alt="boxes" class="absolute w-[80%] top-[30%] right-[5%] "/>
+            <img src="../images/page_1/yellow-box.webp" alt="no-1 coimbatore" class="absolute w-[45%] top-[60%] left-[5%]"/>
+            <img src="../images/page_1/yellow-bar.webp" alt="yellow-bg" class="absolute w-[100%] bottom-[10%] w-[55%] h-[8%] left-[%]"/>
+            <img src="../images/page_1/bottom-icons.webp" alt="icons" class="absolute w-[60%] bottom-[12%] left-[5%] "/>
+            <img src="../images/page_1/mobile-icon.webp" alt="mobile-icon" class="absolute w-[2.5%] bottom-[6%] left-[5%] "/>
+            <!-- Mobile Number 1 -->
+            <a href="tel:+919994440423"><img src="../images/page_1/mobile-no-1.webp" alt="mobile-number-1" class="absolute w-[12%] bottom-[6.5%] left-[8.5%]" /></a>
+               <!-- Mobile Number 2 -->
+            <a href="tel:+918220363639"><img src="../images/page_1/mobile-no-2.webp" alt="mobile-number-2" class="absolute w-[12%] bottom-[6.5%] left-[22%]" /></a>
+                <!-- Email -->
+            <a href="mailto:terratechpacks@gmail.com"><img src="../images/page_1/email.webp" alt="email" class="absolute w-[30%] bottom-[3%] left-[5%]" /></a>
+             <img src="../images/page_1/line.webp" alt="line" class="absolute w-[%] bottom-[3%] left-[36%] h-[5%]"/>
+             <img src="../images/page_1/location.webp" alt="location" class="absolute w-[45%] bottom-[4%] right-[18%] "/>
+             <img src="../images/page_1/QR.webp" alt="QR" class="absolute w-[11%] bottom-[4%] right-[5%] "/>
+        </div>
+
+ <!-- ==========================page 1 end=============================================== -->
+ <!-- ==========================page 2 start=============================================== -->
+
+      <div class="page relative">
+        <img src="../images/page_2_new/toc.png" alt="" class="about_images about_toc">
+        <img src="../images/page_2_new/logo_image.png" alt="" class="about_images about_logo">
+<!--         
+        <img src="../images/page_2_new/line.png" alt="" class="about_images about_line">
+        
+        <img src="../images/page_2_new/rounder_containers.png" alt="" class="about_images about_round_c">
+        <img src="../images/page_2_new/round_numbers.png" alt="" class="about_images about_round_n">
+        <img src="../images/page_2_new/120ml_Round_Container.png" alt="" class="about_images about_120_round">
+        <img src="../images/page_2_new/250ml_Round_Container.png" alt="" class="about_images about_250_round">
+        <img src="../images/page_2_new/250ml_Glass_Round.png" alt="" class="about_images about_250_gls">
+        <img src="../images/page_2_new/300ml_Round_Container  .png" alt="" class="about_images about_300_round">
+        <img src="../images/page_2_new/450ml_Container.png" alt="" class="about_images about_450">
+        <img src="../images/page_2_new/500ml_Round_Square_Container.png" alt="" class="about_images about_500_sq">
+        <img src="../images/page_2_new/500ml_Round_Container.png" alt="" class="about_images about_500_round">
+        <img src="../images/page_2_new/750ml_Round_Container.png" alt="" class="about_images about_750_round">
+        <img src="../images/page_2_new/1000ml_Round.png" alt="" class="about_images about_1000_round">
+
+        <img src="../images/page_2_new/rectangle_containers.png" alt="" class="about_images about_rect">
+        <img src="../images/page_2_new/rectangle_numbers.png" alt="" class="about_images about_rect_no">
+        <img src="../images/page_2_new/500ml_Rectangular_Container.png" alt="" class="about_images about_500_rect">
+        <img src="../images/page_2_new/750ml_Rectangular_Container.png" alt="" class="about_images about_750_rect">
+
+        <img src="../images/page_2_new/sweet_box.png" alt="" class="about_images about_sweet">
+        <img src="../images/page_2_new/sweet_box_numbers.png" alt="" class="about_images about_sweet_no">
+        <img src="../images/page_2_new/250gms_Sweet_Box.png" alt="" class="about_images about_sweet_250">
+        <img src="../images/page_2_new/500gms_Sweet_Box.png" alt="" class="about_images about_sweet_500">
+        <img src="../images/page_2_new/1kg_Sweet_Box.png" alt="" class="about_images about_sweet_1kg"> class="about_images "
+
+        <img src="../images/page_2_new/tamper_evident.png" alt="" class="about_images about_te">
+        <img src="../images/page_2_new/tamper_numbers.png" alt="" class="about_images about_te_no">
+        <img src="../images/page_2_new/TE_250gms_Sweet_Box.png" alt="" class="about_images about_250_te">
+        <img src="../images/page_2_new/TE_500gms Sweet Box.png" alt="" class="about_images about_500_te"> -->
+        <div id="svg_container" class="">
+
+        </div>
+      </div>
+
+ <!-- ==========================page 2 end=============================================== -->
+<!-- ==========================page 3 start=============================================== -->
+
+<!-- <div class="page relative ">
+<img src="../images/Page_3/about us.webp" alt="about-us" class="absolute top-[5%] left-[5%] line-reveal31"/>
+<img src="../images/Page_3/video-img.webp" alt="video-img" class="absolute top-[12%] right-[5%] w-[40%] line-reveal31"/>
+<img src="../images/Page_3/Line 1.webp" alt="line" class="absolute top-[10%] left-[5%] right-[5%] w-[90%] line-reveal31"/>
+<img src="../images/Page_3/text-1.webp" alt="text" class="absolute top-[12%] left-[5%] w-[50%] line-reveal31"/>
+<img src="../images/Page_3/Branding Possibilities.webp" alt="branding-possibility" class="absolute top-[50%] left-[5%] w-[35%] line-reveal31"/>
+<img src="../images/Page_3/text-2.webp" alt="text" class="absolute top-[55%] left-[5%] w-[50%] line-reveal31"/>
+<img src="../images/Page_3/text-3.webp" alt="text" class="absolute top-[75%] left-[5%] w-[50%] line-reveal31"/>
+<img src="../images/Page_3/screen-printing.webp" alt="image" class="absolute top-[58%] right-[15%] w-[15%] line-reveal31"/>
+<img src="../images/Page_3/iml-img.webp" alt="IML" class="absolute top-[78%] right-[16%] w-[12%] line-reveal31"/>
+<img src="../images/Page_3/02.webp" alt="02" class="absolute bottom-[2%] left-[50%] w-[2.5%] line-reveal31"/>
+<img src="../images/Page_3/terratechpacks.com.webp" alt="mail" class="absolute bottom-[3%] right-[5%] w-[20%] line-reveal31"/>
+</div> -->
+
+<div class="page relative">
+  <img src="../images/page_3_new/about_us.png" alt="" class="absolute profile_text">
+  <img src="../images/page_3_new/welcome_text.svg" alt="" class="absolute profile_welcome">
+  <img src="../images/page_3_new/branding_possibilities.svg" alt="" class="absolute profile_brand">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/KmKxpD-rhu8?si=ozj_ClI_iMXw8-xn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="youtube_link"></iframe>
+  <img src="../images/Page_3/02.webp" alt="02" class="absolute bottom-[2%] right-[4%] w-[2.5%] line-reveal31"/>
+  <a class="cursor-pointer" target="_blank" href="https://terratechpacks.com/"><img src="../images/Page_3/terratechpacks.com.webp" alt="mail" class="absolute bottom-[2%] left-[5%] w-[20%] line-reveal31"/></a>
+</div>
+
+ <!-- ==========================page 3 end=============================================== -->
+ <!-- ==========================page 4 start=============================================== -->
+<div class="page relative">
+  <img src="../images/model_images_new/round_containers.svg" alt="round_containers" class="absolute top-[7%] left-[7%] w-[35%] page-4-right"/>
+  <img src="../images/text-images-new/120-ml-round-title.webp" alt="120-ml-title" class="absolute top-[7%] right-[5%] w-[45%] page-4-right h-[6%]"/>
+  <img src="../images/text-images-new/120-ml-round-text.svg" alt="120-ml-text" class="absolute top-[19%] right-[5%] w-[45%] page-4-right"/>
+  <img src="../images/Pause GIF image.gif" alt="click-here" class="absolute top-[12%] left-[20%] w-[10%]"/>
+  <a target="_blank" href="../lightBox/index.html#120-ml-round"> <img src="../images/model_images_new/120_ml_round.svg" alt="120-ml-container" class="absolute top-[20%] left-[5%] w-[40%] page-4-right"/></a>
+  <img src="../images/text-images-new/250-ml-round-title.webp" alt="250-ml-title" class="absolute top-[55%] left-[5%] w-[45%] page-4-left h-[6%]  "/>
+  <img src="../images/text-images-new/120-ml-round-text.svg" alt="250-ml-text" class="absolute top-[65%] left-[5%] w-[45%] page-4-left"/>
+   <img src="../images/Pause GIF image.gif" alt="click-here" class="absolute top-[58%] right-[20%] w-[10%]"/>
+  <a target="_blank" href="../lightBox/index.html#250-ml-round"><img src="../images/model_images_new/250_ml_round.svg" alt="250-ml-container" class="absolute bottom-[8%] right-[7%] w-[40%] page-4-left"/></a>
+  <img src="../images/page_4/03.webp" alt="03" class="absolute bottom-[2%] left-[4%] w-[2.5%]"/>
+</div>
+
+ <!-- ==========================page 4 end=============================================== -->
+ <!-- ==========================page 5 start=============================================== -->
+
+<div class="page relative">
+  
+  <img src="../images/text-images-new/250-ml-round-glass-title.webp" alt="120-ml-title" class="absolute top-[7%] right-[5%] w-[45%] page-5-right h-[6%] "/>
+  <img src="../images/text-images-new/250-ml-round-glass-text.svg" alt="120-ml-text" class="absolute top-[19%] right-[5%] w-[45%] page-5-right"/>
+   <img src="../images/Pause GIF image.gif" alt="click-here" class="absolute top-[12%] left-[20%] w-[10%]"/>
+  <a target="_blank" href="../lightBox/index.html#250ml-glass-round" ><img src="../images/model_images_new/250_gls_img.svg" alt="120-ml-container" class="absolute top-[20%] left-[5%] w-[40%] page-5-right"/></a>
+  <img src="../images/text-images-new/300-ml-round-title.webp" alt="250-ml-title" class="absolute top-[55%] left-[5%] w-[45%] page-5-left h-[6%] "/>
+  <img src="../images/text-images-new/300-ml-round-text.svg" alt="250-ml-text" class="absolute top-[65%] left-[5%] w-[45%] page-5-left"/>
+   <img src="../images/Pause GIF image.gif" alt="click-here" class="absolute top-[58%] right-[20%] w-[10%]"/>
+  <a target="_blank" href="../lightBox/index.html#300-ml-round"><img src="../images/model_images_new/300_imgs.svg" alt="250-ml-container" class="absolute bottom-[8%] right-[7%] w-[40%] page-5-left"/></a>
+  <img src="../images/page_5/04.webp" alt="04" class="absolute bottom-[2%] right-[4%] w-[2.5%]"/>
+</div>
+
+
+ <!-- ==========================page 5 end=============================================== -->
+ <!-- ==========================page 6 start=============================================== -->
+
+<div class="page relative">
+
+  <img src="../images/text-images-new/450-ml-round-title.webp" alt="120-ml-title" class="absolute top-[7%] right-[5%] w-[45%] page-6-right h-[6%] "/>
+  <img src="../images/text-images-new/450-ml-round-text.svg" alt="120-ml-text" class="absolute top-[19%] right-[5%] w-[45%] page-6-right"/>
+  <img src="../images/Pause GIF image.gif" alt="click-here" class="absolute top-[12%] left-[20%] w-[10%]"/>
+  <a target="_blank" href="../lightBox/index.html#500gms-450ml-container" ><img src="../images/model_images_new/450_img.svg" alt="120-ml-container" class="absolute top-[20%] left-[5%] w-[43%] page-6-right"/></a>
+  <img src="../images/text-images-new/500-ml-square-title.webp" alt="250-ml-title" class="absolute top-[55%] left-[5%] w-[50%] page-6-left h-[6%] "/>
+  <img src="../images/text-images-new/500-ml-square-text.svg" alt="250-ml-text" class="absolute top-[65%] left-[5%] w-[45%] page-6-left"/>
+  <img src="../images/Pause GIF image.gif" alt="click-here" class="absolute top-[58%] right-[20%] w-[10%]"/>
+  <a target="_blank" href="../lightBox/index.html#500ml-container"><img src="../images/model_images_new/500ml_sq_img.svg" alt="250-ml-container" class="absolute bottom-[8%] right-[7%] w-[40%] page-6-left"/></a>
+  <img src="../images/page_6/05.webp" alt="05" class="absolute bottom-[2%] left-[4%] w-[2.5%]"/>
+</div>
+
+
+ <!-- ==========================page 6 end=============================================== -->
+ <!-- ==========================page 7 start=============================================== -->
+  
+<div class="page relative">
+  
+  <img src="../images/text-images-new/500-ml-round-title.webp" alt="120-ml-title" class="absolute top-[7%] right-[5%] w-[45%] page-7-right h-[6%] " />
+  <img src="../images/text-images-new/500-ml-round-text.svg" alt="120-ml-text" class="absolute top-[19%] right-[5%] w-[45%] page-7-right"/>
+  <img src="../images/Pause GIF image.gif" alt="click-here" class="absolute top-[12%] left-[20%] w-[10%]"/>
+  <a target="_blank" href="../lightBox/index.html#500ml-round-container" ><img src="../images/model_images_new/500ml_round_img.svg" alt="120-ml-container" class="absolute top-[20%] left-[5%] w-[40%] page-7-right"/></a>
+
+  <img src="../images/text-images-new/750-ml-round-title.webp" alt="250-ml-title" class="absolute top-[55%] left-[5%] w-[45%] page-7-left h-[6%] "/>
+  <img src="../images/text-images-new/750-ml-round-text.svg" alt="250-ml-text" class="absolute top-[65%] left-[5%] w-[45%] page-7-left"/>
+  <img src="../images/Pause GIF image.gif" alt="click-here" class="absolute top-[58%] right-[20%] w-[10%]"/>
+  <a target="_blank" href="../lightBox/index.html#750ml-round-container"><img src="../images/model_images_new/750ml_round_img.svg" alt="250-ml-container" class="absolute bottom-[6%] right-[7%] w-[38%] page-7-left"/></a>
+  <img src="../images/page_7/06.webp" alt="06" class="absolute bottom-[2%] right-[4%] w-[2.5%]"/>
+</div>
+ 
+ <!-- ==========================page 7 end=============================================== -->
+ <!-- ==========================page 8 start=============================================== -->
+  
+<div class="page relative">
+  <img src="../images/text-images-new/1000-ml-round-title.webp" alt="120-ml-title" class="absolute top-[7%] right-[5%] w-[45%] page-8-right h-[6%] "/>
+  <img src="../images/text-images-new/1000-ml-round-text.svg" alt="120-ml-text" class="absolute top-[19%] right-[5%] w-[45%] page-8-right"/>
+  <img src="../images/Pause GIF image.gif" alt="click-here" class="absolute top-[12%] left-[20%] w-[10%]"/>
+  <a target="_blank" href="../lightBox/index.html#1000-ml-round" ><img src="../images/model_images_new/1000ml_round_img.svg" alt="120-ml-container" class="absolute top-[20%] left-[5%] w-[40%] page-8-right"/></a>
+ <img src="../images/model_images_new/rectangular.svg" alt="rectangle_containers" class="absolute top-[54%] right-[8%] w-[35%] page-8-left"/>
+  <img src="../images/text-images-new/500-ml-rectangular-title.webp" alt="250-ml-title" class="absolute top-[55%] left-[5%] w-[45%] page-8-left h-[6%] "/>
+  <img src="../images/text-images-new/500-ml-rectangular-text.svg" alt="250-ml-text" class="absolute top-[65%] left-[5%] w-[45%] page-8-left"/>
+  <img src="../images/Pause GIF image.gif" alt="click-here" class="absolute top-[62%] right-[20%] w-[10%]"/>
+  <a target="_blank" href="../lightBox/index.html#500ml-rectangular-container"><img src="../images/model_images_new/500ml_rectangular_img.svg" alt="250-ml-container" class="absolute bottom-[8%] right-[5%] w-[40%] page-8-left"/></a>
+  <img src="../images/page_8/07.webp" alt="07" class="absolute bottom-[2%] left-[4%] w-[2.5%]"/>
+</div>
+ <!-- ==========================page 8 end=============================================== -->
+ <!-- ==========================page 9 start=============================================== -->
+  
+<div class="page relative">
+
+    <img src="../images/text-images-new/750-ml-rectangular-title.webp" alt="120-ml-title" class="absolute top-[7%] right-[5%] w-[45%] page-9-right h-[6%] "/>
+  <img src="../images/text-images-new/750-ml-rectangular-text.svg" alt="120-ml-text" class="absolute top-[19%] right-[5%] w-[45%] page-9-right"/>
+  <img src="../images/Pause GIF image.gif" alt="click-here" class="absolute top-[12%] left-[20%] w-[10%]"/>
+  <a target="_blank" href="../lightBox/index.html#750ml-rectangular-container" ><img src="../images/model_images_new/750ml_rectangular_img.svg" alt="120-ml-container" class="absolute top-[20%] left-[5%] w-[40%] page-9-right"/></a>
+    <img src="../images/model_images_new/sweet_box.svg" alt="sweet_box" class="absolute top-[54%] right-[15%] w-[20%] page-9-left"/>
+  <img src="../images/text-images-new/250-gms-sweet-title.webp" alt="250-ml-title" class="absolute top-[55%] left-[5%] w-[45%] page-9-left h-[6%] "/>
+  <img src="../images/text-images-new/250-gms-sweet-text.svg" alt="250-ml-text" class="absolute top-[65%] left-[5%] w-[45%] page-9-left"/>
+  <img src="../images/Pause GIF image.gif" alt="click-here" class="absolute top-[58%] right-[20%] w-[10%]"/>
+  <a target="_blank" href="../lightBox/index.html#250-gms-sweet"><img src="../images/model_images_new/250gms_img.svg" alt="250-ml-container" class="absolute bottom-[5%] right-[7%] w-[40%] page-9-left"/></a>
+  <img src="../images/page_9/08.webp" alt="08" class="absolute bottom-[2%] right-[4%] w-[2.5%]"/>
+</div>
+
+ 
+ <!-- ==========================page 9 end=============================================== -->
+ <!-- ==========================page 10 start=============================================== -->
+  
+<div class="page relative">
+  
+  <img src="../images/text-images-new/500-gms-sweet-title.webp" alt="120-ml-title" class="absolute top-[7%] right-[5%] w-[45%] page-10-right h-[6%] "/>
+  <img src="../images/text-images-new/500-gms-sweet-text.svg" alt="120-ml-text" class="absolute top-[19%] right-[5%] w-[45%] page-10-right"/>
+  <img src="../images/Pause GIF image.gif" alt="click-here" class="absolute top-[12%] left-[20%] w-[10%]"/>
+  <a target="_blank" href="../lightBox/index.html#500gms-sweet-box" ><img src="../images/model_images_new/500gms_img.svg" alt="120-ml-container" class="absolute top-[22%] left-[3%] w-[44%] page-10-right"/></a>
+  <img src="../images/text-images-new/1-kg-sweet-title.webp" alt="250-ml-title" class="absolute top-[55%] left-[5%] w-[45%] page-10-left h-[6%] "/>
+  <img src="../images/text-images-new/1-kg-sweet-text.svg" alt="250-ml-text" class="absolute top-[65%] left-[5%] w-[45%] page-10-left"/>
+  <img src="../images/Pause GIF image.gif" alt="click-here" class="absolute top-[58%] right-[20%] w-[10%]"/>
+  <a target="_blank" href="../lightBox/index.html#1000gms-sweet-box"><img src="../images/model_images_new/1kg_gms_img.svg" alt="250-ml-container" class="absolute bottom-[8%] right-[5%] w-[38%] page-10-left"/></a>
+  <img src="../images/page_10/09.webp" alt="09" class="absolute bottom-[2%] left-[4%] w-[2.5%]"/>
+</div>
+
+ <!-- ==========================page 10 end=============================================== -->
+ <!-- ==========================page 11 start=============================================== -->
+  
+<div class="page relative">
+    <img src="../images/model_images_new/tamper_evident.svg" alt="tamper_evident" class="absolute top-[7%] left-[10%] w-[30%] page-11-right"/>
+  <img src="../images/text-images-new/250-gms-sweet-TE-title.webp" alt="120-ml-title" class="absolute top-[7%] right-[5%] w-[45%] page-11-right h-[6%] "/>
+  <img src="../images/text-images-new/250-gms-sweet-TE-text.svg" alt="120-ml-text" class="absolute top-[19%] right-[5%] w-[45%] page-11-right"/>
+  <img src="../images/Pause GIF image.gif" alt="click-here" class="absolute top-[12%] left-[20%] w-[10%]"/>
+  <a target="_blank" href="../lightBox/index.html#250_gms_te_sb" ><img src="../images/model_images_new/250gms_te_img.svg" alt="120-ml-container" class="absolute top-[22%] left-[5%] w-[40%] page-11-right"/></a>
+  <img src="../images/text-images-new/500-gms-sweet-TE-title.webp" alt="250-ml-title" class="absolute top-[55%] left-[5%] w-[45%] page-11-left h-[6%] "/>
+  <img src="../images/text-images-new/500-gms-sweet-TE-text.svg" alt="250-ml-text" class="absolute top-[65%] left-[5%] w-[45%] page-11-left"/>
+  <img src="../images/Pause GIF image.gif" alt="click-here" class="absolute top-[58%] right-[20%] w-[10%]"/>
+  <a target="_blank" href="../lightBox/index.html#500_gms_te_sb"><img src="../images/model_images_new/500gms_te_img.svg" alt="250-ml-container" class="absolute bottom-[10%] right-[5%] w-[45%] page-11-left"/></a>
+  <img src="../images/page_11/10.webp" alt="10" class="absolute bottom-[2%] right-[4%] w-[2.5%]"/>
+</div>
+ 
+ <!-- ==========================page 11 end=============================================== -->
+ <!-- ==========================page 12 start=============================================== -->
+
+<div class="page relative">
+  <img src="../images/page_12/contact-img.webp" alt="workplace" class="absolute top-[0] left-[0]"/>
+  <img src="../images/page_12/Contact Us.webp" alt="contact-us" class="absolute bottom-[40%] left-[30%] w-[35%]"/>
+  <!-- <img src="../images/page_12/opening_new.png" alt="opening" class="absolute bottom-[26%] right-[12%] w-[29%] page-12-right"/> -->
+  <img src="../images/page_12/Office Address.svg" alt="office-address" class="absolute bottom-[34%] left-[5%] w-[35%] page-12-left"/>
+  <img src="../images/page_12/location.svg" alt="location" class="absolute bottom-[25%] left-[5%] w-[60%] page-12-right"/>
+  <img src="../images/page_12/phone-icon.webp" alt="phone" class="absolute bottom-[20%] left-[5%] w-[4%] page-12-left"/>
+  <img src="../images/page_12/number-1.svg" alt="phone-number" class="absolute bottom-[21%] left-[10%] w-[17%] page-12-left"/>
+  <img src="../images/page_12/number-2.svg" alt="phone-number" class="absolute bottom-[21%] left-[29%] w-[16%] page-12-left"/>
+<a href="mailto:terratechpacks@gmail.com">
+  <img src="../images/page_12/email.svg" alt="email"
+       class="absolute bottom-[29%] right-[5%] w-[40%] page-12-right" />
+</a>
+  <a href="https://terratechpacks.com/" target="_blank"><img src="../images/page_12/website.svg" alt="website" class="absolute bottom-[24%] right-[5%] w-[40%] page-12-right"/></a>
+  <iframe class="absolute bottom-[4%] right-[5%] w-[90%] h-[15%] page-12-right" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3917.1574683116733!2d76.95185237504442!3d10.951475189208146!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba85b6841a218f7%3A0x825be0e2a0d59933!2sTerra%20Tech%20Packs!5e0!3m2!1sen!2sin!4v1757066739807!5m2!1sen!2sin" width="600" height="450" style="border:0; " allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  
+ <a class="cursor-pointer" target="_blank" href="https://www.fist-o.com/"><p class="absolute bottom-[1%] right-[5%] text-gray-500 text-xs page-12-right">Designed by Fist-o Pvt Ltd</p></a>  
+</div>
+
+
+ <!-- ==========================page 12 end=============================================== -->
+ <!-- ==========================page  start=============================================== -->
+ <!-- ==========================page  end=============================================== -->
+
+       
+        
+      
+      
+
+
+
+
+        <a ignore="1" class="ui-arrow-control ui-arrow-next-page"></a>
+        <a ignore="1" class="ui-arrow-control ui-arrow-previous-page"></a>
+      </div>
+    </div>
+
+
+
+    <!-- <audio id="page-8audio">
+      <source src="../assets/voice/contactus.mp3" type="audio/mp3">
+    </audio> -->
+
+    <audio id="audio" src="./pageflip.mp3"></audio>
+
+    <!-- controls -->
+    <div id="controls">
+      <div class="all">
+
+
+        <!-- zoom slider -->
+        <div id="zoom-slider-view" class="zoom-slider">
+          <div class="bg">
+            <div class="ui-slider" id="zoom-slider">
+              <div class="bar">
+                <div class="progress-width">
+                  <div class="progress">
+                    <div class="handler"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- / zoom slider -->
+      </div>
+
+      <div id="ui-icon-expand-options">
+        <a class="ui-icon show-hint">
+          <i class="fa fa-ellipsis-h"></i>
+        </a>
+      </div>
+
+    </div>
+
+    <!-- / controls -->
+
+    <!-- miniatures -->
+    <div id="miniatures" class="ui-miniatures-slider">
+    </div>
+    <!-- / miniatures -->
+  </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+    
+  <!-- <script type="text/javascript" src="./assets/js/app copy.js"></script> -->
+  <script type="text/javascript">
+    let windowWidth = window.innerWidth;
+    const normal = {width: 1300, height: 800};
+    const lower = {width: 1100, height: 690};
+    
+    const crctSize = (windowWidth > 1280) ? normal : lower;
+
+    console.log('correct width: ', crctSize.width);
+    console.log('correct height: ', crctSize.height);
+    FlipbookSettings = {
+      options: {
+        width: crctSize.width,
+        height: crctSize.height
+      },
+
+      shareMessage: 'Introducing turn.js 5 - HTML5 Library for Flipbooks.',
+
+      table: [{
+        text: 'Cover',
+        page: 1
+      },
+      {
+        text: 'About Company',
+        page: 2
+      },
+      {
+        text: 'Agriculture',
+        page: 4
+      },
+      {
+        text: 'Irrigation',
+        page: 6
+      },
+      {
+        text: 'Pumb Starters',
+        page: 12
+      },
+      {
+        text: 'Pumb Controllers',
+        page: 16
+      },
+      {
+        text: 'Domestic',
+        page: 19
+      },
+      {
+        text: 'waterpumbControllers',
+        page: 21
+      },
+      {
+        text: 'timers',
+        page: 24
+      },
+      {
+        text: 'waterlevelControllers',
+        page: 27
+      },
+      {
+        text: 'blog&Client',
+        page: 31
+      },
+      {
+        text: 'onsite&connect',
+        page: 33
+      },
+      {
+        text: 'contact',
+        page: 34
+      },
+      ],
+
+      pageFolder: 'content/catalog/'
+    };
+   
+
+    $(window).load(function (event) {
+      $("#flipbook .page-1").addClass('animation-on');
+    });
+
+
+ 
+
+    $(".home-img-container").on("click", function () {
+      // Flip to the first page
+      $('#flipbook').turn('page', 1);
+    });
+
+    $('.full-screen').on('click', function () {
+      window.parent.postMessage({ action: "toggleFullscreen" }, "*");
+    });
+
+
+    $(document).ready(function () {
+      const flipbook = $('#flipbook');
+      const audio = document.getElementById('audio');
+
+      flipbook.bind('turning', function () {
+        if (audio) {
+          audio.currentTime = 0;
+          audio.play();
+        }
+      });
+    });
+$('#flipbook').bind('turning', function (event, page, view) {
+      console.log("Page turning");
+      // resetPageImages();
+    });
+ 
+      $('#flipbook').bind('turned', function (event, page, view) {
+        console.log(`Page no: ${page}`);
+      });
+
+
+  function resetPageImages() {
+      // const allAnimatedImages = document.querySelectorAll("[data-image-animation], [data-3d-image-animation]");
+      const allAnimatedImages = document.querySelectorAll(".line-reveal31, .page-4-right, .page-4-left, .page-5-right, .page-5-left, .page-6-right, .page-6-left, .page-7-right, .page-7-left, .page-8-right, .page-8-left, .page-9-right, .page-9-left, .page-10-right, .page-10-left, .page-11-right, .page-11-left, .page-12-right, .page-12-left ");
+      allAnimatedImages.forEach((img) => {
+        gsap.set(img, {
+          opacity: 0,
+          x: 0,
+          y: 0,
+          scale: 1
+        });
+      });
+      gsap.set('.line-reveal31, .page-4-right, .page-4-left, .page-5-right, .page-5-left, .page-6-right, .page-6-left, .page-7-right, .page-7-left,  .page-8-right, .page-8-left, .page-9-right, .page-9-left, .page-10-right, .page-10-left, .page-11-right, .page-11-left, .page-12-right, .page-12-left ', { opacity: 0 });
+    }
+
+
+$('#flipbook').bind('turning', function (event, page, view) {
+      resetPageImages(); // Clear or reset before the page turns
+    });
+
+
+    // page content animations
+    $('#flipbook').bind('turned', function (event, page, view) {
+      // resetPageImages();
+      console.log("Page turned to: " + page);
+      if (page === 2 || page === 3) {
+     Page1_1_1_Animation();
+      }
+      if (page === 4 || page === 5) {
+    Page4RightAnimation();
+    Page4LeftAnimation();
+    Page5RightAnimation();
+    Page5LeftAnimation();
+        // page1_2_Animation();
+        // animation
+      }
+      else if(page === 6 || page === 7){
+    Page6RightAnimation();
+    Page6LeftAnimation();
+    Page7RightAnimation();
+    Page7LeftAnimation();
+      }
+      else if(page === 8 || page === 9){
+    Page8RightAnimation();
+    Page8LeftAnimation();
+    Page9RightAnimation();
+    Page9LeftAnimation();
+      }
+      else if(page === 10 || page === 11){
+    Page10RightAnimation();
+    Page10LeftAnimation();
+    Page11RightAnimation();
+    Page11LeftAnimation();
+        console.log("page 10 and 11")
+      }
+      else if(page === 12 || page === 13){
+    Page12RightAnimation();
+    Page12LeftAnimation();
+       console.log("page 12 and 13")
+
+      }
+      
+      else{
+        // clearAnimation();
+      } 
+    });
+function Page1_1_1_Animation() {
+  gsap.fromTo('.line-reveal31',
+    { opacity: 0, y: 50 },   // start: hidden + moved down
+    {
+      opacity: 1,
+      y: 0,
+      duration: 0.5,
+      stagger: 0,          // reveal line by line
+      ease: "power3.out"
+    }
+  );
+}
+function Page4RightAnimation() {
+  gsap.fromTo(
+    ".page-4-right",
+    { opacity: 0, x: 80 },   // start: hidden + shifted to the right
+    {
+      opacity: 1,
+      x: 0,                  // move to normal position
+      duration: 0.5,
+      stagger: 0.1,          // reveal one by one if multiple
+      ease: "power3.out"
+    }
+  );
+}
+function Page4LeftAnimation() {
+  gsap.fromTo(
+    ".page-4-left",
+    { opacity: 0, x: -80 },   // start: hidden + shifted to the right
+    {
+      opacity: 1,
+      x: 0,                  // move to normal position
+      duration: 0.5,
+      stagger: 0.1,          // reveal one by one if multiple
+      ease: "power3.out"
+    }
+  );
+}
+function Page5RightAnimation() {
+  gsap.fromTo(
+    ".page-5-right",
+    { opacity: 0, x: 80 },   // start: hidden + shifted to the right
+    {
+      opacity: 1,
+      x: 0,                  // move to normal position
+      duration: 0.5,
+      stagger: 0.1,          // reveal one by one if multiple
+      ease: "power3.out"
+    }
+  );
+}
+function Page5LeftAnimation() {
+  gsap.fromTo(
+    ".page-5-left",
+    { opacity: 0, x: -80 },   // start: hidden + shifted to the right
+    {
+      opacity: 1,
+      x: 0,                  // move to normal position
+      duration: 0.5,
+      stagger: 0.1,          // reveal one by one if multiple
+      ease: "power3.out"
+    }
+  );
+}
+function Page6RightAnimation() {
+  gsap.fromTo(
+    ".page-6-right",
+    { opacity: 0, x: 80 },   // start: hidden + shifted to the right
+    {
+      opacity: 1,
+      x: 0,                  // move to normal position
+      duration: 0.5,
+      stagger: 0.1,          // reveal one by one if multiple
+      ease: "power3.out"
+    }
+  );
+}
+function Page6LeftAnimation() {
+  gsap.fromTo(
+    ".page-6-left",
+    { opacity: 0, x: -80 },   // start: hidden + shifted to the right
+    {
+      opacity: 1,
+      x: 0,                  // move to normal position
+      duration: 0.5,
+      stagger: 0.1,          // reveal one by one if multiple
+      ease: "power3.out"
+    }
+  );
+}
+function Page7RightAnimation() {
+  gsap.fromTo(
+    ".page-7-right",
+    { opacity: 0, x: 80 },   // start: hidden + shifted to the right
+    {
+      opacity: 1,
+      x: 0,                  // move to normal position
+      duration: 0.5,
+      stagger: 0.1,          // reveal one by one if multiple
+      ease: "power3.out"
+    }
+  );
+}
+function Page7LeftAnimation() {
+  gsap.fromTo(
+    ".page-7-left",
+    { opacity: 0, x: -80 },   // start: hidden + shifted to the right
+    {
+      opacity: 1,
+      x: 0,                  // move to normal position
+      duration: 0.5,
+      stagger: 0.1,          // reveal one by one if multiple
+      ease: "power3.out"
+    }
+  );
+}
+function Page8RightAnimation() {
+  gsap.fromTo(
+    ".page-8-right",
+    { opacity: 0, x: 80 },   // start: hidden + shifted to the right
+    {
+      opacity: 1,
+      x: 0,                  // move to normal position
+      duration: 0.5,
+      stagger: 0.1,          // reveal one by one if multiple
+      ease: "power3.out"
+    }
+  );
+}
+function Page8LeftAnimation() {
+  gsap.fromTo(
+    ".page-8-left",
+    { opacity: 0, x: -80 },   // start: hidden + shifted to the right
+    {
+      opacity: 1,
+      x: 0,                  // move to normal position
+      duration: 0.5,
+      stagger: 0.1,          // reveal one by one if multiple
+      ease: "power3.out"
+    }
+  );
+}
+function Page9RightAnimation() {
+  gsap.fromTo(
+    ".page-9-right",
+    { opacity: 0, x: 80 },   // start: hidden + shifted to the right
+    {
+      opacity: 1,
+      x: 0,                  // move to normal position
+      duration: 0.5,
+      stagger: 0.1,          // reveal one by one if multiple
+      ease: "power3.out"
+    }
+  );
+}
+function Page9LeftAnimation() {
+  gsap.fromTo(
+    ".page-9-left",
+    { opacity: 0, x: -80 },   // start: hidden + shifted to the right
+    {
+      opacity: 1,
+      x: 0,                  // move to normal position
+      duration: 0.5,
+      stagger: 0.1,          // reveal one by one if multiple
+      ease: "power3.out"
+    }
+  );
+}
+function Page10RightAnimation() {
+  gsap.fromTo(
+    ".page-10-right",
+    { opacity: 0, x: 80 },   // start: hidden + shifted to the right
+    {
+      opacity: 1,
+      x: 0,                  // move to normal position
+      duration: 0.5,
+      stagger: 0.1,          // reveal one by one if multiple
+      ease: "power3.out"
+    }
+  );
+}
+function Page10LeftAnimation() {
+  gsap.fromTo(
+    ".page-10-left",
+    { opacity: 0, x: -80 },   // start: hidden + shifted to the right
+    {
+      opacity: 1,
+      x: 0,                  // move to normal position
+      duration: 0.5,
+      stagger: 0.1,          // reveal one by one if multiple
+      ease: "power3.out"
+    }
+  );
+}
+function Page11RightAnimation() {
+  gsap.fromTo(
+    ".page-11-right",
+    { opacity: 0, x: 80 },   // start: hidden + shifted to the right
+    {
+      opacity: 1,
+      x: 0,                  // move to normal position
+      duration: 0.5,
+      stagger: 0.1,          // reveal one by one if multiple
+      ease: "power3.out"
+    }
+  );
+}
+function Page11LeftAnimation() {
+  gsap.fromTo(
+    ".page-11-left",
+    { opacity: 0, x: -80 },   // start: hidden + shifted to the right
+    {
+      opacity: 1,
+      x: 0,                  // move to normal position
+      duration: 0.5,
+      stagger: 0.1,          // reveal one by one if multiple
+      ease: "power3.out"
+    }
+  );
+}
+function Page12RightAnimation() {
+  gsap.fromTo(
+    ".page-12-right",
+    { opacity: 0, x: 80 },   // start: hidden + shifted to the right
+    {
+      opacity: 1,
+      x: 0,                  // move to normal position
+      duration: 0.5,
+      stagger: 0.1,          // reveal one by one if multiple
+      ease: "power3.out"
+    }
+  );
+}
+function Page12LeftAnimation() {
+  gsap.fromTo(
+    ".page-12-left",
+    { opacity: 0, x: -80 },   // start: hidden + shifted to the right
+    {
+      opacity: 1,
+      x: 0,                  // move to normal position
+      duration: 0.5,
+      stagger: 0.1,          // reveal one by one if multiple
+      ease: "power3.out"
+    }
+  );
+}
+
+
+    $('#flipbook').bind('turning', function (event, page, view) {
+      // resetPageImages();
+       // Clear or reset before the page turns
+    });
+
+
+  </script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // Get all toc links
+    const tocLinks = document.querySelectorAll(".tb-link");
+
+    // Loop through each link
+    tocLinks.forEach(link => {
+      link.addEventListener("click", function () {
+        const page = this.getAttribute("data-page");   // page number
+        const audioPath = this.getAttribute("data-audio-path"); // audio
+
+        // Flip to the page
+        $("#flipbook").turn("page", parseInt(page));
+
+        // Play audio if available
+        if (audioPath) {
+          let audio = new Audio(audioPath);
+          audio.play();
+        }
+      });
+    });
+  });
+</script>
+<script>
+  fetch('../images/table_of_content/table-of-content.svg')
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById('svg_container').innerHTML = data
+  })
+  .catch(e => {console.log(e)})
+</script>
+
+
+<script>
+  document.getElementById("whatsappShareBtn").addEventListener("click", function () {
+    const pageUrl = document.getElementById("shareInput").value || window.location.href;
+    const whatsappUrl = "https://wa.me/?text=" + encodeURIComponent(pageUrl);
+    window.open(whatsappUrl, "_blank");
+  });
+</script>
+
+
+
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  // Reusable audio player
+  const audio = document.createElement("audio");
+  document.body.appendChild(audio);
+
+  // Load the SVG
+  fetch('../images/table_of_content/table-of-content.svg')
+    .then(response => response.text())
+    .then(data => {
+      const svgContainer = document.getElementById('svg_container');
+      svgContainer.innerHTML = data;
+
+      // Attach click to every element with an ID inside SVG
+      svgContainer.querySelectorAll("[id]").forEach(el => {
+        el.style.cursor = "pointer";
+
+        el.addEventListener("click", () => {
+          const itemId = el.id;
+
+          let pageNo = null;
+          let audioPath = null;
+
+          // ---- Mapping ----
+          if (itemId === "120_ml_Round_Container") {
+            pageNo = 4;
+            audioPath = "../audios/120ml Round Container.mp3";
+          } 
+          else if (itemId === "250_ml_Round_Container") {
+            pageNo = 4;
+            audioPath = "../audios/250ml Round Container.mp3";
+          } 
+          else if (itemId === "250_ml_Glass_Round") {
+            pageNo = 4;
+            audioPath = "../audios/250ml Glass Round.mp3";
+          } 
+          else if (itemId === "300_ml_Round_ContainerÂ Â ") {
+            pageNo = 4;
+            audioPath = "../audios/300ml Round Container.mp3";
+          }
+           else if (itemId === "500_gms_450_ml_Container") {
+            pageNo = 6;
+            audioPath = "../audios/500gms , 450ml Container.mp3";
+          } 
+          else if (itemId === "500_ml_Round_Square_Container") {
+            pageNo = 6;
+            audioPath = "../audios/500ml Square Container.mp3";
+          } 
+          else if (itemId === "500_ml_Round_Container") {
+            pageNo = 6;
+            audioPath = "../audios/500ml Round Container.mp3";
+          }
+           else if (itemId === "750_ml_Round_Container") {
+            pageNo = 6;
+            audioPath = "../audios/750ml Round Container.mp3";
+          } 
+          else if (itemId === "1000_ml_Round") {
+            pageNo = 8;
+            audioPath = "../audios/1000ml Round.mp3";
+          } 
+          else if (itemId === "500_ml_Rectangular_Container") {
+            pageNo = 8;
+            audioPath = "../audios/500ml Rectangular Container.mp3";
+          }
+           else if (itemId === "750_ml_Rectangular_Container") {
+            pageNo = 8;
+            audioPath = "../audios/750ml Rectangular Container.mp3";
+          } 
+          else if (itemId === "250_gms_Sweet_Box") {
+            pageNo = 8;
+            audioPath = "../audios/250gms Sweet Box.mp3";
+          } 
+           else if (itemId === "500_gms_Sweet_Box") {
+            pageNo = 10;
+            audioPath = "../audios/500gms Sweet Box.mp3";
+          } 
+          else if (itemId === "1kg_Sweet_Box") {
+            pageNo = 10;
+            audioPath = "../audios/1kg Sweet Box.mp3";
+          }
+           else if (itemId === "TE_250gms_Sweet_Box") {
+            pageNo = 10;
+            audioPath = "../audios/250gms Sweet BoxTE.mp3";
+          } 
+          else if (itemId === "TE_500gms_Sweet_Box") {
+            pageNo = 10;
+            audioPath = "../audios/500gms Sweet BoxTE.mp3";
+          } 
+         
+          // 👉 add all your 16 mappings
+
+          // ---- Turn.js page flip ----
+          if (pageNo !== null && $("#flipbook").turn) {
+            $("#flipbook").turn("page", pageNo);
+          }
+
+          // ---- Play audio ----
+          if (audioPath) {
+            audio.src = audioPath;
+            audio.currentTime = 0;
+            audio.play().catch(err => console.log("Audio error:", err));
+          }
+        });
+      });
+    })
+    .catch(e => console.log("SVG load error:", e));
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.2.0/model-viewer.min.js  "></script> -->
+  <!-- <script type="text/javascript" src="../script.js"></script> -->
+  <script type="text/javascript" src="script.js"></script>
+
+
+
+</body>
+
+
+</html>
