@@ -128,3 +128,22 @@
     margin-left: 0;
 }
 
+.flex-col img {
+   transition: transform 1s ease-in-out, box-shadow 1s ease-in-out;
+  cursor: pointer;
+}
+
+.flex-col img:hover {
+  transform: scale(1.1); /* light zoom */
+  /* box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); optional shadow for depth */
+}
+
+
+.flex-col:hover img {
+  transform: scale(1.08);
+}
+
+.flex-col:hover p {
+  color: #fbba00; /* your theme color */
+  transition: color 0.3s ease;
+}

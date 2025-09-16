@@ -357,7 +357,7 @@ height: 7%;
 }
 
 .nav-toggle-btn:hover {
-    background: gray; /* lighter green on hover */
+    background: #fcb33e; /* lighter green on hover */
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
  
 }
@@ -1003,4 +1003,7 @@ height: 7%;
     top: 10%;
     left: 15%;
     pointer-events: none;
+}
+.home-icon{
+    padding: 11px;
 }
