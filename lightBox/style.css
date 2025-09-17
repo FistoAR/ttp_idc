@@ -40,7 +40,7 @@
 
 .flex-col img {
     position: unset !important;
-    max-height: 70px !important; 
+    max-height: 100px !important; 
     cursor: pointer;
     user-select: none;
     width: auto;
