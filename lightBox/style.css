@@ -148,3 +148,6 @@
   transition: color 0.3s ease;
 }
 
+.bg_color{
+    background-color: rgb(230, 219, 189);
+}
