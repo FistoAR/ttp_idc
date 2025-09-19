@@ -332,7 +332,9 @@ document.addEventListener("DOMContentLoaded", () => {
       if (imlBtn) {
         const defaultColor = imlBtn.getAttribute("data-color") || "#ffffff";
         topMat.pbrMetallicRoughness.baseColorTexture.setTexture(null);
-        topMat.pbrMetallicRoughness.setBaseColorFactor(hexToRgbaArray(defaultColor));
+        topMat.pbrMetallicRoughness.setBaseColorFactor([1,1,1,1]);
+        topMat.pbrMetallicRoughness.setBaseColorFactor(defaultColor);
+        // topMat.pbrMetallicRoughness.setBaseColorFactor(hexToRgbaArray(defaultColor));
       }
 
       // Generic handler
