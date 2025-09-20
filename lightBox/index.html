@@ -17,6 +17,7 @@
   <title>Terra Tech Packs 3D Model View</title>
 
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/pickr.min.js"></script>
 </head>
 
 <body>
@@ -31,7 +32,7 @@
 <!-- ----------------------120-ml-round----------------- -->
 
   <div class="lightbox-target " id="120-ml-round" >
-    <div class="position-relative bg-[#e4d193]">
+    <div class="position-relative bg-[#e4d193] background_color1">
 
 <div class="">
 <p class="text-2xl font-bold  mt-[50px] text-center  " style="margin-top: 50px;">120ml Round Container</p>
@@ -54,7 +55,7 @@
       </model-viewer>
     </div>
 
-    <div class="flex-container bottom-absolute relative">
+    <div class="flex-container bottom-absolute relative" style="top: 10%; " >
       <div class="flex-col d-none">
         <img src="../images/model_images_new/IML.svg" alt="" class="iml_button" data-model="120ml_round" data-model-path="">
         <p class="text-center">IML</p>
@@ -72,6 +73,21 @@
          data-color="#ffffff">
         <p class="text-center">Plain</p>
       </div>
+
+         <!-- ✅ Full Color Picker -->
+       <div class="flex-col">
+<div class="flex justify-center mt-4 flex-col">
+  <!-- <label for="bgColorPicker" class="mr-2 font-semibold">Background Color:</label> -->
+  <input type="color" id="bgColorPicker1" value="#9bdfd5" class="w-12 h-12  cursor-pointer hidden " style="margin-left: 35%;">
+<img src="../images/colorwheel.png"
+     alt="Color Picker"
+     style="width:50px; height:auto; margin-left:35%; cursor:pointer;"
+     onclick="document.getElementById('bgColorPicker1').click();">
+  <p for="bgColorPicker" class="mr-2 ">Background Color</p>
+</div>
+       </div>
+
+
       <!-- <div class="flex-col">
         <img src="./assets/images/color_img.png" alt="">
       </div> -->
@@ -87,7 +103,7 @@
   <!-- ----------------------250-ml-round----------------- -->
 
   <div class="lightbox-target" id="250-ml-round">
-    <div class="position-relative bg-[#9bdfd5]">
+    <div class="position-relative bg-[#9bdfd5] background_color2 ">
 
 <p class="text-2xl font-bold  mt-[50px] text-center " style="margin-top: 50px;" >250ml Round Container</p>
 
@@ -106,7 +122,7 @@
       </model-viewer>
     </div>
 
-    <div class="flex-container bottom-absolute">
+    <div class="flex-container bottom-absolute" style="top: 10%; " style="top: 10%;">
       <div class="flex-col ">
         <img src="../images/model_images_new/IML.svg" alt="" class="iml_button " data-model="250ml_round" data-model-path="texture_models/250ml_round.glb"
         data-texture="../images/3D_models/2.250 round-20250917T093854Z-1-001/2.250 round/250 round label(2908x448).png"
@@ -125,6 +141,20 @@
          data-color="#ffffff">
         <p class="text-center">Plain</p>
       </div>
+
+      <!-- ✅ Full Color Picker -->
+       <div class="flex-col">
+<div class="flex justify-center mt-4 flex-col">
+  <!-- <label for="bgColorPicker" class="mr-2 font-semibold">Background Color:</label> -->
+  <input type="color" id="bgColorPicker2" value="#9bdfd5" class="w-12 h-12  cursor-pointer hidden " style="margin-left: 35%;">
+<img src="../images/colorwheel.png"
+     alt="Color Picker"
+     style="width:50px; height:auto; margin-left:35%; cursor:pointer;"
+     onclick="document.getElementById('bgColorPicker2').click();">
+  <p for="bgColorPicker" class="mr-2 ">Background Color</p>
+</div>
+       </div>
+
       <!-- <div class="flex-col">
         <img src="./assets/images/color_img.png" alt="">
       </div> -->
@@ -140,7 +170,7 @@
   <!-- ----------------------250ml-glass-round----------------- -->
 
   <div class="lightbox-target " id="250ml-glass-round">
-    <div class="position-relative bg-[#e4d193]">
+    <div class="position-relative bg-[#e4d193] background_color3" >
 
 <p class="text-2xl font-bold  mt-[10px] text-center" style="margin-top: 50px;">250ml Glass Round Container</p>
 
@@ -159,7 +189,7 @@
       </model-viewer>
     </div>
 
-    <div class="flex-container bottom-absolute">
+    <div class="flex-container bottom-absolute" style="top: 10%;">
       <div class="flex-col">
         <!-- <img src="../images/model_images_new/IML.svg" alt="" class="iml_button" data-model-path="texture_models/250ml_glass_round.glb"
         
@@ -179,6 +209,21 @@
          data-color="#ffffff">
         <p class="text-center">Plain</p>
       </div>
+
+   <!-- ✅ Full Color Picker -->
+       <div class="flex-col">
+<div class="flex justify-center mt-4 flex-col">
+  <!-- <label for="bgColorPicker" class="mr-2 font-semibold">Background Color:</label> -->
+  <input type="color" id="bgColorPicker3" value="#9bdfd5" class="w-12 h-12  cursor-pointer hidden " style="margin-left: 35%;">
+<img src="../images/colorwheel.png"
+     alt="Color Picker"
+     style="width:50px; height:auto; margin-left:35%; cursor:pointer;"
+     onclick="document.getElementById('bgColorPicker3').click();">
+  <p for="bgColorPicker" class="mr-2 ">Background Color</p>
+</div>
+       </div>
+
+
       <!-- <div class="flex-col">
         <img src="./assets/images/color_img.png" alt="">
       </div> -->
@@ -194,7 +239,7 @@
   <!-- ----------------------300-ml-round----------------- -->
 
   <div class="lightbox-target" id="300-ml-round">
-    <div class="position-relative bg-[#f3b8b7]">
+    <div class="position-relative bg-[#f3b8b7] background_color4">
 
 
       <p class="text-2xl font-bold  mt-[10px] text-center " style="margin-top: 50px;">300ml Round Container</p>
@@ -214,7 +259,7 @@
       </model-viewer>
     </div>
 
-    <div class="flex-container bottom-absolute">
+    <div class="flex-container bottom-absolute" style="top: 10%;">
   <div class="flex-col">
     <img src="../images/model_images_new/IML.svg" 
          alt="" 
@@ -241,6 +286,26 @@
          data-color="#ffffff">
     <p class="text-center">Plain</p>
   </div>
+
+
+   <!-- ✅ Full Color Picker -->
+       <div class="flex-col">
+<div class="flex justify-center mt-4 flex-col">
+  <!-- <label for="bgColorPicker" class="mr-2 font-semibold">Background Color:</label> -->
+  <input type="color" id="bgColorPicker4" value="#9bdfd5" class="w-12 h-12  cursor-pointer hidden " style="margin-left: 35%;">
+<img src="../images/colorwheel.png"
+     alt="Color Picker"
+     style="width:50px; height:auto; margin-left:35%; cursor:pointer;"
+     onclick="document.getElementById('bgColorPicker4').click();">
+  <p for="bgColorPicker" class="mr-2 ">Background Color</p>
+</div>
+       </div>
+
+
+
+
+
+
 </div>
 <a class="lightbox-close" href="#" onclick="javascript:window.close()"></a>
     <div class="deg">
@@ -256,7 +321,7 @@
   <!-- ----------------------500ml-round-container----------------- -->
 
   <div class="lightbox-target" id="500ml-round-container">
-    <div class="position-relative bg-[#cba2ab]">
+    <div class="position-relative bg-[#cba2ab] background_color5">
 
       <p class="text-2xl font-bold  mt-[10px] text-center " style="margin-top: 50px;">500ml Round Container</p>
 
@@ -275,7 +340,7 @@
       </model-viewer>
     </div>
 
-    <div class="flex-container bottom-absolute">
+    <div class="flex-container bottom-absolute" style="top: 10%;">
       <div class="flex-col">
         <img src="../images/model_images_new/IML.svg" alt="" class="iml_button" data-model="250ml_round" data-model-path="texture_models/500ml_round_container.glb"  
         data-texture="../images/3D_models/5.500ml Round-20250917T094250Z-1-001/5.500ml Round/500 round label(2908x448).png"
@@ -295,6 +360,26 @@
          data-color="#ffffff">
         <p class="text-center">Plain</p>
       </div>
+
+
+   <!-- ✅ Full Color Picker -->
+       <div class="flex-col">
+<div class="flex justify-center mt-4 flex-col">
+  <!-- <label for="bgColorPicker" class="mr-2 font-semibold">Background Color:</label> -->
+  <input type="color" id="bgColorPicker5" value="#9bdfd5" class="w-12 h-12  cursor-pointer hidden " style="margin-left: 35%;">
+<img src="../images/colorwheel.png"
+     alt="Color Picker"
+     style="width:50px; height:auto; margin-left:35%; cursor:pointer;"
+     onclick="document.getElementById('bgColorPicker5').click();">
+  <p for="bgColorPicker" class="mr-2 ">Background Color</p>
+</div>
+       </div>
+
+
+
+
+
+
       <!-- <div class="flex-col">
         <img src="./assets/images/color_img.png" alt="">
       </div> -->
@@ -310,7 +395,7 @@
   <!-- ----------------------500gms-450ml-container----------------- -->
 
   <div class="lightbox-target" id="500gms-450ml-container">
-    <div class="position-relative bg-[#9ccae7]">
+    <div class="position-relative bg-[#9ccae7] background_color6">
 
 <p class="text-2xl font-bold  mt-[10px] text-center "style="margin-top: 50px;">500gms/450ml Round Container</p>
 
@@ -328,7 +413,7 @@
         </div>
       </model-viewer>
     </div>
-    <div class="flex-container bottom-absolute">
+    <div class="flex-container bottom-absolute" style="top: 10%;">
       <div class="flex-col">
         <img src="../images/model_images_new/IML.svg" alt="" class="iml_button" data-model="500_450_container" data-model-path="texture_models/450ml_container.glb"
         data-texture="../images/3D_models/500gms -20250917T094254Z-1-001/6.450ml-500gms/450ml label(2923x748).png"
@@ -347,6 +432,21 @@
          data-color="#ffffff">
         <p class="text-center">Plain</p>
       </div>
+
+   <!-- ✅ Full Color Picker -->
+       <div class="flex-col">
+<div class="flex justify-center mt-4 flex-col">
+  <!-- <label for="bgColorPicker" class="mr-2 font-semibold">Background Color:</label> -->
+  <input type="color" id="bgColorPicker6" value="#9bdfd5" class="w-12 h-12  cursor-pointer hidden " style="margin-left: 35%;">
+<img src="../images/colorwheel.png"
+     alt="Color Picker"
+     style="width:50px; height:auto; margin-left:35%; cursor:pointer;"
+     onclick="document.getElementById('bgColorPicker6').click();">
+  <p for="bgColorPicker" class="mr-2 ">Background Color</p>
+</div>
+       </div>
+
+
       <!-- <div class="flex-col">
         <img src="./assets/images/color_img.png" alt="">
       </div> -->
@@ -362,7 +462,7 @@
   <!-- ----------------------500ml-sq-container----------------- -->
 
   <div class="lightbox-target" id="500ml-container">
-    <div class="position-relative bg-[#f5b8b7]">
+    <div class="position-relative bg-[#f5b8b7] background_color7">
 
       <p class="text-2xl font-bold  mt-[10px] text-center " style="margin-top: 50px;">500ml Square Container</p>
 
@@ -381,7 +481,7 @@
       </model-viewer>
     </div>
 
-    <div class="flex-container bottom-absolute">
+    <div class="flex-container bottom-absolute" style="top: 10%;">
       <div class="flex-col">
         <img src="../images/model_images_new/IML.svg" alt="" class="iml_button" data-model="250ml_round" data-model-path="texture_models/500ml_round_sq_container.glb"
         data-texture="../images/3D_models/7.500ml round Sq-20250918T040411Z-1-001/7.500ml round Sq/500 round label.png"
@@ -400,6 +500,23 @@
          data-color="#ffffff">
         <p class="text-center">Plain</p>
       </div>
+
+
+   <!-- ✅ Full Color Picker -->
+       <div class="flex-col">
+<div class="flex justify-center mt-4 flex-col">
+  <!-- <label for="bgColorPicker" class="mr-2 font-semibold">Background Color:</label> -->
+  <input type="color" id="bgColorPicker7" value="#9bdfd5" class="w-12 h-12  cursor-pointer hidden " style="margin-left: 35%;">
+<img src="../images/colorwheel.png"
+     alt="Color Picker"
+     style="width:50px; height:auto; margin-left:35%; cursor:pointer;"
+     onclick="document.getElementById('bgColorPicker7').click();">
+  <p for="bgColorPicker" class="mr-2 ">Background Color</p>
+</div>
+       </div>
+
+
+
       <!-- <div class="flex-col">
         <img src="./assets/images/color_img.png" alt="">
       </div> -->
@@ -416,7 +533,7 @@
   <!-- ----------------------500ml-rectangular-container----------------- -->
 
   <div class="lightbox-target" id="500ml-rectangular-container">
-    <div class="position-relative bg-[#b8f3dd]">
+    <div class="position-relative bg-[#b8f3dd] background_color8">
 
       <p class="text-2xl font-bold  mt-[10px] text-center " style="margin-top: 50px;">500ml Rectangular Container</p>
 
@@ -435,7 +552,7 @@
       </model-viewer>
     </div>
 
-    <div class="flex-container bottom-absolute">
+    <div class="flex-container bottom-absolute" style="top: 10%;">
       <div class="flex-col">
         <img src="../images/model_images_new/IML.svg" alt="" class="iml_button" data-model="500ml_rectangular" data-model-path="texture_models/500ml_rectangular_container.glb"
         data-texture="../images/3D_models/8.500ml rectangular-20250917T095555Z-1-001/8.500ml rectangular/500 rect label (1926x1289).png"
@@ -455,6 +572,26 @@
          data-color="#ffffff">
         <p class="text-center">Plain</p>
       </div>
+
+
+
+   <!-- ✅ Full Color Picker -->
+       <div class="flex-col">
+<div class="flex justify-center mt-4 flex-col">
+  <!-- <label for="bgColorPicker" class="mr-2 font-semibold">Background Color:</label> -->
+  <input type="color" id="bgColorPicker8" value="#9bdfd5" class="w-12 h-12  cursor-pointer hidden " style="margin-left: 35%;">
+<img src="../images/colorwheel.png"
+     alt="Color Picker"
+     style="width:50px; height:auto; margin-left:35%; cursor:pointer;"
+     onclick="document.getElementById('bgColorPicker8').click();">
+  <p for="bgColorPicker" class="mr-2 ">Background Color</p>
+</div>
+       </div>
+
+
+
+
+
       <!-- <div class="flex-col">
         <img src="./assets/images/color_img.png" alt="">
       </div> -->
@@ -471,7 +608,7 @@
   <!-- ----------------------750ml-round-container----------------- -->
 
   <div class="lightbox-target" id="750ml-round-container">
-    <div class="position-relative bg-[#cfb3a9]">
+    <div class="position-relative bg-[#cfb3a9] background_color9">
 
       <p class="text-2xl font-bold  mt-[10px] text-center " style="margin-top: 50px;">750ml Round Container</p>
 
@@ -490,7 +627,7 @@
       </model-viewer>
     </div>
 
-    <div class="flex-container bottom-absolute">
+    <div class="flex-container bottom-absolute" style="top: 10%;">
       <div class="flex-col">
         <img src="../images/model_images_new/IML.svg" alt="" class="iml_button" data-model="250ml_round" data-model-path="texture_models/750ml_round_container.glb"
         data-texture="../images/3D_models/9.750ml round-20250917T131906Z-1-001/9.750ml round/750 round label (4360x 701).png"
@@ -509,6 +646,21 @@
          data-color="#ffffff">
         <p class="text-center">Plain</p>
       </div>
+
+
+
+         <!-- ✅ Full Color Picker -->
+       <div class="flex-col">
+<div class="flex justify-center mt-4 flex-col">
+  <!-- <label for="bgColorPicker" class="mr-2 font-semibold">Background Color:</label> -->
+  <input type="color" id="bgColorPicker9" value="#9bdfd5" class="w-12 h-12  cursor-pointer hidden " style="margin-left: 35%;">
+<img src="../images/colorwheel.png"
+     alt="Color Picker"
+     style="width:50px; height:auto; margin-left:35%; cursor:pointer;"
+     onclick="document.getElementById('bgColorPicker9').click();">
+  <p for="bgColorPicker" class="mr-2 ">Background Color</p>
+</div>
+       </div>
       <!-- <div class="flex-col">
         <img src="./assets/images/color_img.png" alt="">
       </div> -->
@@ -524,7 +676,7 @@
   <!-- ----------------------750ml-rectangular-container----------------- -->
 
   <div class="lightbox-target" id="750ml-rectangular-container">
-    <div class="position-relative bg-[#c7abb9]">
+    <div class="position-relative bg-[#c7abb9] background_color10">
 
       <p class="text-2xl font-bold  mt-[10px] text-center " style="margin-top: 50px;">750ml Rectangular Container</p>
 
@@ -543,7 +695,7 @@
       </model-viewer>
     </div>
 
-    <div class="flex-container bottom-absolute">
+    <div class="flex-container bottom-absolute" style="top: 10%;">
       <div class="flex-col">
         <img src="../images/model_images_new/IML.svg" alt="" class="iml_button" data-model="750_ml_rectangular" data-model-path="texture_models/750ml_rectangular_container.glb"
         data-texture="../images/3D_models/10.750 rectangle-20250917T131953Z-1-001/10.750 rectangle/750 rect label(1926x1289).png"
@@ -562,6 +714,22 @@
          data-color="#ffffff">
         <p class="text-center">Plain</p>
       </div>
+
+
+   <!-- ✅ Full Color Picker -->
+       <div class="flex-col">
+<div class="flex justify-center mt-4 flex-col">
+  <!-- <label for="bgColorPicker" class="mr-2 font-semibold">Background Color:</label> -->
+  <input type="color" id="bgColorPicker10" value="#9bdfd5" class="w-12 h-12  cursor-pointer hidden " style="margin-left: 35%;">
+<img src="../images/colorwheel.png"
+     alt="Color Picker"
+     style="width:50px; height:auto; margin-left:35%; cursor:pointer;"
+     onclick="document.getElementById('bgColorPicker10').click();">
+  <p for="bgColorPicker" class="mr-2 ">Background Color</p>
+</div>
+       </div>
+
+
       <!-- <div class="flex-col">
         <img src="./assets/images/color_img.png" alt="">
       </div> -->
@@ -578,7 +746,7 @@
   <!-- ----------------------250-gms-sweet----------------- -->
 
   <div class="lightbox-target" id="250-gms-sweet">
-    <div class="position-relative bg-[#ccf7f3]">
+    <div class="position-relative bg-[#ccf7f3] background_color11">
 
       <p class="text-2xl font-bold  mt-[10px] text-center " style="margin-top: 50px;">250gms Sweet Box</p>
 
@@ -597,7 +765,7 @@
       </model-viewer>
     </div>
 
-    <div class="flex-container bottom-absolute">
+    <div class="flex-container bottom-absolute" style="top: 10%;">
       <div class="flex-col">
         <img src="../images/model_images_new/IML.svg" alt="" class="iml_button" data-model="250ml_round" data-model-path="texture_models/250gms_sweet.glb"
         data-top-texture="../images/3D_models/11.250sweet box-20250917T132001Z-1-001/11.250sweet box/250 sb top label.png"
@@ -618,6 +786,21 @@
          data-color="#ffffff">
         <p class="text-center">Plain</p>
       </div>
+
+   <!-- ✅ Full Color Picker -->
+       <div class="flex-col">
+<div class="flex justify-center mt-4 flex-col">
+  <!-- <label for="bgColorPicker" class="mr-2 font-semibold">Background Color:</label> -->
+  <input type="color" id="bgColorPicker11" value="#9bdfd5" class="w-12 h-12  cursor-pointer hidden " style="margin-left: 35%;">
+<img src="../images/colorwheel.png"
+     alt="Color Picker"
+     style="width:50px; height:auto; margin-left:35%; cursor:pointer;"
+     onclick="document.getElementById('bgColorPicker11').click();">
+  <p for="bgColorPicker" class="mr-2 ">Background Color</p>
+</div>
+       </div>
+
+
       <!-- <div class="flex-col">
         <img src="./assets/images/color_img.png" alt="">
       </div> -->
@@ -634,7 +817,7 @@
   <!-- ----------------------250_gms_te_sb----------------- -->
 
   <div class="lightbox-target" id="250_gms_te_sb">
-    <div class="position-relative bg-[#dfd39b]">
+    <div class="position-relative bg-[#dfd39b] background_color12">
 
       <p class="text-2xl font-bold  mt-[10px] text-center " style="margin-top: 50px;">250gms Sweet Box TE</p>
 
@@ -653,7 +836,7 @@
       </model-viewer>
     </div>
 
-    <div class="flex-container bottom-absolute">
+    <div class="flex-container bottom-absolute" style="top: 10%;">
       <div class="flex-col">
         <img src="../images/model_images_new/IML.svg" alt="" class="iml_button" data-model="250ml_round" data-model-path="texture_models/250gms_sweet_te.glb"
         data-top-texture="../images/3D_models/13.TE 250 sb-20250917T132007Z-1-001/13.TE 250 sb/TE 250 sb top.png"
@@ -674,6 +857,24 @@
          data-color="#ffffff">
         <p class="text-center">Plain</p>
       </div>
+
+
+
+         <!-- ✅ Full Color Picker -->
+       <div class="flex-col">
+<div class="flex justify-center mt-4 flex-col">
+  <!-- <label for="bgColorPicker" class="mr-2 font-semibold">Background Color:</label> -->
+  <input type="color" id="bgColorPicker12" value="#9bdfd5" class="w-12 h-12  cursor-pointer hidden " style="margin-left: 35%;">
+<img src="../images/colorwheel.png"
+     alt="Color Picker"
+     style="width:50px; height:auto; margin-left:35%; cursor:pointer;"
+     onclick="document.getElementById('bgColorPicker12').click();">
+  <p for="bgColorPicker" class="mr-2 ">Background Color</p>
+</div>
+       </div>
+
+
+
       <!-- <div class="flex-col">
         <img src="./assets/images/color_img.png" alt="">
       </div> -->
@@ -690,7 +891,7 @@
   <!-- ----------------------500gms-sweet-box----------------- -->
 
   <div class="lightbox-target" id="500gms-sweet-box">
-    <div class="position-relative bg-[#f3b7b4]">
+    <div class="position-relative bg-[#f3b7b4] background_color13">
 
       <p class="text-2xl font-bold  mt-[10px] text-center " style="margin-top: 50px;">500gms Sweet Box</p>
 
@@ -709,7 +910,7 @@
       </model-viewer>
     </div>
 
-    <div class="flex-container bottom-absolute">
+    <div class="flex-container bottom-absolute" style="top: 10%;">
       <div class="flex-col">
         <img src="../images/model_images_new/IML.svg" alt="" class="iml_button" data-model="250ml_round" data-model-path="texture_models/500gms_sweet.glb"
         data-top-texture="../images/3D_models/12.500 sweet box-20250917T132004Z-1-001/12.500 sweet box/500 sb top label.png"
@@ -731,6 +932,21 @@
          data-color="#ffffff">
         <p class="text-center">Plain</p>
       </div>
+
+   <!-- ✅ Full Color Picker -->
+       <div class="flex-col">
+<div class="flex justify-center mt-4 flex-col">
+  <!-- <label for="bgColorPicker" class="mr-2 font-semibold">Background Color:</label> -->
+  <input type="color" id="bgColorPicker13" value="#9bdfd5" class="w-12 h-12  cursor-pointer hidden " style="margin-left: 35%;">
+<img src="../images/colorwheel.png"
+     alt="Color Picker"
+     style="width:50px; height:auto; margin-left:35%; cursor:pointer;"
+     onclick="document.getElementById('bgColorPicker13').click();">
+  <p for="bgColorPicker" class="mr-2 ">Background Color</p>
+</div>
+       </div>
+
+
       <!-- <div class="flex-col">
         <img src="./assets/images/color_img.png" alt="">
       </div> -->
@@ -746,7 +962,7 @@
   <!-- ----------------------500_gms_te_sb----------------- -->
 
   <div class="lightbox-target" id="500_gms_te_sb">
-    <div class="position-relative bg-[#beefef]">
+    <div class="position-relative bg-[#beefef] background_color14">
 
       <p class="text-2xl font-bold  mt-[10px] text-center " style="margin-top: 50px;">500gms Sweet Box TE</p>
 
@@ -765,7 +981,7 @@
       </model-viewer>
     </div>
 
-    <div class="flex-container bottom-absolute">
+    <div class="flex-container bottom-absolute" style="top: 10%;">
       <div class="flex-col">
         <img src="../images/model_images_new/IML.svg" alt="" class="iml_button" data-model="250ml_round" data-model-path="texture_models/500gms_sweet_te.glb"
         data-top-texture="../images/3D_models/14.TE 500 sb-20250917T132013Z-1-001/14.TE 500 sb/TE 500 sb top.png"
@@ -787,6 +1003,23 @@
          data-color="#ffffff">
         <p class="text-center">Plain</p>
       </div>
+
+
+         <!-- ✅ Full Color Picker -->
+       <div class="flex-col">
+<div class="flex justify-center mt-4 flex-col">
+  <!-- <label for="bgColorPicker" class="mr-2 font-semibold">Background Color:</label> -->
+  <input type="color" id="bgColorPicker14" value="#9bdfd5" class="w-12 h-12  cursor-pointer hidden " style="margin-left: 35%;">
+<img src="../images/colorwheel.png"
+     alt="Color Picker"
+     style="width:50px; height:auto; margin-left:35%; cursor:pointer;"
+     onclick="document.getElementById('bgColorPicker14').click();">
+  <p for="bgColorPicker" class="mr-2 ">Background Color</p>
+</div>
+       </div>
+
+
+
       <!-- <div class="flex-col">
         <img src="./assets/images/color_img.png" alt="">
       </div> -->
@@ -803,7 +1036,7 @@
   <!-- ----------------------1000gms-sweet-box----------------- -->
 
   <div class="lightbox-target" id="1000gms-sweet-box">
-    <div class="position-relative bg-[#f5e5c6]">
+    <div class="position-relative bg-[#f5e5c6] background_color15">
 
       <p class="text-2xl font-bold  mt-[10px] text-center " style="margin-top: 50px;">1kg Sweet Box</p>
 
@@ -822,7 +1055,7 @@
       </model-viewer>
     </div>
 
-    <div class="flex-container bottom-absolute">
+    <div class="flex-container bottom-absolute" style="top: 10%;">
       <div class="flex-col">
         <img src="../images/model_images_new/IML.svg" alt="" class="iml_button" data-model="250ml_round" data-model-path="texture_models/1kg_sweet_box.glb"
         data-texture="../images/3D_models/15.1kg sweet box-20250917T132016Z-1-001/15.1kg sweet box/1kg sweetb label(1926x1289).png"
@@ -841,6 +1074,23 @@
          data-color="#ffffff">
         <p class="text-center">Plain</p>
       </div>
+
+
+
+         <!-- ✅ Full Color Picker -->
+       <div class="flex-col">
+<div class="flex justify-center mt-4 flex-col">
+  <!-- <label for="bgColorPicker" class="mr-2 font-semibold">Background Color:</label> -->
+  <input type="color" id="bgColorPicker15" value="#9bdfd5" class="w-12 h-12  cursor-pointer hidden " style="margin-left: 35%;">
+<img src="../images/colorwheel.png"
+     alt="Color Picker"
+     style="width:50px; height:auto; margin-left:35%; cursor:pointer;"
+     onclick="document.getElementById('bgColorPicker15').click();">
+  <p for="bgColorPicker" class="mr-2 ">Background Color</p>
+</div>
+       </div>
+
+
       <!-- <div class="flex-col">
         <img src="./assets/images/color_img.png" alt="">
       </div> -->
@@ -857,7 +1107,7 @@
   <!-- ----------------------1000-ml-round----------------- -->
 
   <div class="lightbox-target" id="1000-ml-round">
-    <div class="position-relative bg-[#b19367]">
+    <div class="position-relative bg-[#b19367] background_color16">
 
       <p class="text-2xl font-bold  mt-[10px] text-center " style="margin-top: 50px;">1000ml Round Container</p>
 
@@ -876,7 +1126,7 @@
       </model-viewer>
     </div>
 
-    <div class="flex-container bottom-absolute">
+    <div class="flex-container bottom-absolute" style="top: 10%;">
       <div class="flex-col">
         <img src="../images/model_images_new/IML.svg" alt="" class="iml_button" data-model="250ml_round" data-model-path="texture_models/1000ml_round_container.glb"
         data-texture="../images/3D_models/16.1000ml round-20250917T132031Z-1-001/16.1000ml round/1000ml round label(4153x929).png"
@@ -895,6 +1145,21 @@
          data-color="#ffffff">
         <p class="text-center">Plain</p>
       </div>
+
+   <!-- ✅ Full Color Picker -->
+       <div class="flex-col">
+<div class="flex justify-center mt-4 flex-col">
+  <!-- <label for="bgColorPicker" class="mr-2 font-semibold">Background Color:</label> -->
+  <input type="color" id="bgColorPicker16" value="#9bdfd5" class="w-12 h-12  cursor-pointer hidden " style="margin-left: 35%;">
+<img src="../images/colorwheel.png"
+     alt="Color Picker"
+     style="width:50px; height:auto; margin-left:35%; cursor:pointer;"
+     onclick="document.getElementById('bgColorPicker16').click();">
+  <p for="bgColorPicker" class="mr-2 ">Background Color</p>
+</div>
+       </div>
+
+
       <!-- <div class="flex-col">
         <img src="./assets/images/color_img.png" alt="">
       </div> -->
@@ -911,14 +1176,142 @@
 
     <!--*******************Terra Tech model ends*************************-->
 
+<script>
+  // ✅ Change background on color selection
+  document.getElementById("bgColorPicker1").addEventListener("input", function (e) {
+    document.querySelector(".background_color1").style.backgroundColor = e.target.value;
+  });
+</script>
 
 
 
+<script>
+  // ✅ Change background on color selection
+  document.getElementById("bgColorPicker2").addEventListener("input", function (e) {
+    document.querySelector(".background_color2").style.backgroundColor = e.target.value;
+  });
+</script>
+
+
+<script>
+  // ✅ Change background on color selection
+  document.getElementById("bgColorPicker3").addEventListener("input", function (e) {
+    document.querySelector(".background_color3").style.backgroundColor = e.target.value;
+  });
+</script>
 
 
 
+<script>
+  // ✅ Change background on color selection
+  document.getElementById("bgColorPicker4").addEventListener("input", function (e) {
+    document.querySelector(".background_color4").style.backgroundColor = e.target.value;
+  });
+</script>
 
 
+<script>
+  // ✅ Change background on color selection
+  document.getElementById("bgColorPicker5").addEventListener("input", function (e) {
+    document.querySelector(".background_color5").style.backgroundColor = e.target.value;
+  });
+</script>
+
+
+
+<script>
+  // ✅ Change background on color selection
+  document.getElementById("bgColorPicker6").addEventListener("input", function (e) {
+    document.querySelector(".background_color6").style.backgroundColor = e.target.value;
+  });
+</script>
+
+
+<script>
+  // ✅ Change background on color selection
+  document.getElementById("bgColorPicker7").addEventListener("input", function (e) {
+    document.querySelector(".background_color7").style.backgroundColor = e.target.value;
+  });
+</script>
+
+
+
+<script>
+  // ✅ Change background on color selection
+  document.getElementById("bgColorPicker8").addEventListener("input", function (e) {
+    document.querySelector(".background_color8").style.backgroundColor = e.target.value;
+  });
+</script>
+
+
+
+<script>
+  // ✅ Change background on color selection
+  document.getElementById("bgColorPicker9").addEventListener("input", function (e) {
+    document.querySelector(".background_color9").style.backgroundColor = e.target.value;
+  });
+</script>
+
+
+
+<script>
+  // ✅ Change background on color selection
+  document.getElementById("bgColorPicker10").addEventListener("input", function (e) {
+    document.querySelector(".background_color10").style.backgroundColor = e.target.value;
+  });
+</script>
+
+
+<script>
+  // ✅ Change background on color selection
+  document.getElementById("bgColorPicker11").addEventListener("input", function (e) {
+    document.querySelector(".background_color11").style.backgroundColor = e.target.value;
+  });
+</script>
+
+
+
+<script>
+  // ✅ Change background on color selection
+  document.getElementById("bgColorPicker12").addEventListener("input", function (e) {
+    document.querySelector(".background_color12").style.backgroundColor = e.target.value;
+  });
+</script>
+
+
+
+<script>
+  // ✅ Change background on color selection
+  document.getElementById("bgColorPicker13").addEventListener("input", function (e) {
+    document.querySelector(".background_color13").style.backgroundColor = e.target.value;
+  });
+</script>
+
+
+
+<script>
+  // ✅ Change background on color selection
+  document.getElementById("bgColorPicker14").addEventListener("input", function (e) {
+    document.querySelector(".background_color14").style.backgroundColor = e.target.value;
+  });
+</script>
+
+
+<script>
+  // ✅ Change background on color selection
+  document.getElementById("bgColorPicker15").addEventListener("input", function (e) {
+    document.querySelector(".background_color15").style.backgroundColor = e.target.value;
+  });
+</script>
+
+
+
+<script>
+  // ✅ Change background on color selection
+  document.getElementById("bgColorPicker16").addEventListener("input", function (e) {
+    document.querySelector(".background_color16").style.backgroundColor = e.target.value;
+  });
+</script>
 
 
 

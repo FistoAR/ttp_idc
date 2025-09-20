@@ -419,3 +419,87 @@ document.addEventListener("DOMContentLoaded", () => {
       handleTextureChange(_map.scr_print);
       handleTextureChange(_map.plain);
     });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/********** BACKGROUND COLOR PICKER **********/
+
+// Target your background container
+const bgContainer = document.querySelector(".background_color");
+
+// Brightness helper (for border contrast)
+function getBrightness(hex) {
+  const r = parseInt(hex.substr(1, 2), 16);
+  const g = parseInt(hex.substr(3, 2), 16);
+  const b = parseInt(hex.substr(5, 2), 16);
+  return (r * 299 + g * 587 + b * 114) / 1000;
+}
+
+// Apply background color
+function applyColor(colorStr) {
+  if (bgContainer) {
+    bgContainer.style.backgroundColor = colorStr;
+    localStorage.setItem("bgColor250mlRound", colorStr);
+  }
+}
+
+// Update Pickr button border
+function updatePickrBorderColor(hexColor) {
+  const brightness = getBrightness(hexColor);
+  const previewButton = document.querySelector(".pickr .pcr-button");
+  if (previewButton) {
+    previewButton.style.border = `2px solid ${
+      brightness < 128 ? "white" : "black"
+    }`;
+  }
+}
+
+// Initialize Pickr
+const pickr = Pickr.create({
+  el: "#bgColorPicker",
+  theme: "nano", // or 'classic', 'monolith', etc.
+  default: "#9bdfd5", // same as your current bg
+  components: {
+    preview: true,
+    opacity: true,
+    hue: true,
+    interaction: {
+      input: true,
+      save: true,
+    },
+  },
+});
+
+// When Pickr is ready
+pickr.on("init", () => {
+  const savedColor = localStorage.getItem("bgColor250mlRound") || "#9bdfd5";
+  applyColor(savedColor);
+  pickr.setColor(savedColor);
+  updatePickrBorderColor(savedColor);
+});
+
+// On live color change
+pickr.on("change", (color) => {
+  const rgbaColor = color.toRGBA().toString();
+  const hexColor = color.toHEXA().toString();
+
+  applyColor(rgbaColor);
+  updatePickrBorderColor(hexColor);
+});
+
+// Hide picker on save
+pickr.on("save", () => {
+  pickr.hide();
+});
