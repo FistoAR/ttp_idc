@@ -766,8 +766,9 @@ height: 7%;
 .about_toc {
     height: 100%;
     width: 30%;
-    left: 0;
-    top: 0;
+    left: -3%;
+    top: 0%;
+   
 }
 
 .about_logo {

@@ -1253,10 +1253,11 @@ filter: invert(65%) sepia(100%) saturate(560%) hue-rotate(319deg) brightness(90%
 }
 
 .about_toc {
-    height: 100%;
+    height: 102%;
     width: 30%;
-    left: 0;
-    top: 0;
+    left: -3%;
+    top: -1%;
+   
 }
 
 .about_logo {
