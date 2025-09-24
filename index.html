@@ -118,7 +118,7 @@ window.addEventListener("touchstart", enableSoundOnce);
         if (obj && obj.contentWindow) {
           obj.contentWindow.postMessage({ trigger: "startAnimation" }, "*");
         }
-      }, 600); // give time for fade-out
+      }, ); // give time for fade-out
     }
   });
 </script>
