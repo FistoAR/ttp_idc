@@ -344,8 +344,14 @@ document.addEventListener("DOMContentLoaded", () => {
           const hex = btn.getAttribute("data-color");
           if (!hex) return;
           console.log(`${btn.className} clicked → color: ${hex}`);
-          topMat.pbrMetallicRoughness.baseColorTexture.setTexture(null);
-          topMat.pbrMetallicRoughness.setBaseColorFactor(hexToRgbaArray(hex));
+          topMat.pbrMetallicRoughness.setBaseColorFactor([1,1,1,1]);
+           topMat.pbrMetallicRoughness.setBaseColorFactor(hex);
+          // topMat.pbrMetallicRoughness.baseColorTexture.setTexture(null);
+          // topMat.pbrMetallicRoughness.setBaseColorFactor(hexToRgbaArray(hex));
+              if (isIML) {
+      topMat.pbrMetallicRoughness.metallicFactor = 1;
+      topMat.pbrMetallicRoughness.roughnessFactor = 0.65;
+    }
         });
       }
 
